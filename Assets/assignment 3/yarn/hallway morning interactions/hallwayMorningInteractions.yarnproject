@@ -1,10 +1,11 @@
-{
+﻿{
   "projectFileVersion": 2,
   "sourceFiles": [
-    "**/DialogueRunnerTests.yarn",
     "**/*.yarn"
   ],
-  "excludeFiles": [],
+  "excludeFiles": [
+    "**/*~/*"
+  ],
   "localisation": {},
   "baseLanguage": "en",
   "compilerOptions": {}

@@ -1,8 +1,10 @@
 {
   "projectFileVersion": 2,
   "sourceFiles": [
-    "./TestYarnScript.yarn"
+    "**/TestYarnScript-Modified.yarn",
+    "**/TestYarnScript-NoMetadata.yarn"
   ],
+  "excludeFiles": [],
   "localisation": {},
   "baseLanguage": "en",
   "compilerOptions": {}

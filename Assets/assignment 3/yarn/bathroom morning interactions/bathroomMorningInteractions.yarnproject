@@ -1,0 +1,14 @@
+{
+  "projectFileVersion": 2,
+  "sourceFiles": [
+    "**/bathroomDoorExit.yarn",
+    "**/medicineMorning.yarn",
+    "**/showerMorning.yarn"
+  ],
+  "excludeFiles": [
+    "**/*~/*"
+  ],
+  "localisation": {},
+  "baseLanguage": "en",
+  "compilerOptions": {}
+}

@@ -1,0 +1,15 @@
+{
+  "projectFileVersion": 2,
+  "sourceFiles": [
+    "**/bedMorning.yarn",
+    "**/mirrorMorning.yarn",
+    "**/wardrobeMorning.yarn",
+    "**/bedroomDoorExit.yarn"
+  ],
+  "excludeFiles": [
+    "**/*~/*"
+  ],
+  "localisation": {},
+  "baseLanguage": "en",
+  "compilerOptions": {}
+}

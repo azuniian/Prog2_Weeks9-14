@@ -1,10 +1,13 @@
 {
   "projectFileVersion": 2,
   "sourceFiles": [
-    "**/DialogueRunnerTests.yarn",
-    "**/*.yarn"
+    "**/frontDoorExit.yarn",
+    "**/momMorning.yarn",
+    "**/stairsUp.yarn"
   ],
-  "excludeFiles": [],
+  "excludeFiles": [
+    "**/*~/*"
+  ],
   "localisation": {},
   "baseLanguage": "en",
   "compilerOptions": {}
