@@ -13,7 +13,7 @@ public class footsteps : MonoBehaviour
     bool sound1;
     bool sound2;
 
-    public CinemachineImpulseSource impulseSource;
+    //public CinemachineImpulseSource impulseSource;
 
 
     public void playFootstep()
@@ -37,14 +37,14 @@ public class footsteps : MonoBehaviour
             {
                 footstep1.Play();
                 Debug.Log("Footstep 1 playing");
-                impulseSource.GenerateImpulse();
+                //impulseSource.GenerateImpulse();
                 sound1 = false;
             }
             else if(sound2 == true)
             {
                 footstep2.Play();
                 Debug.Log("Footstep 2 playing");
-                impulseSource.GenerateImpulse();
+                //impulseSource.GenerateImpulse();
                 sound2 = false;
             }
         }
