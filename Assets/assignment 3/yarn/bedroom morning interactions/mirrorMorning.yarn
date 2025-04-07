@@ -1,7 +1,7 @@
 ﻿title: mirrorMorningInteraction1
 ---
 <<declare $mirrorInteractions = 0>>
-<<declare $isChanged>>
+<<declare $isChanged = false>>
 <<set $isChanged = true>>
 Meh. Same old me.
 Nothing special.
