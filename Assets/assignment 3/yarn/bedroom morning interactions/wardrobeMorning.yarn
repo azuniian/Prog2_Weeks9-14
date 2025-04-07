@@ -1,5 +1,15 @@
-﻿title: wardrobeMorning
-tags:
+﻿title: wardrobeMorningInteraction1
 ---
+<<declare $wardrobeInteractions = 0>>
+I should change into something semi-decent...
+Maybe it'll help if it looks like I know who I am.
+<<set $wardrobeInteractions = $wardrobeInteractions + 1>>
+===
 
+
+title: wardrobeMorningUnlimited
+---
+The outfit is good enough.
+I mean, at least the clothes are clean.
+<<set $wardrobeInteractions = $wardrobeInteractions + 1>>
 ===

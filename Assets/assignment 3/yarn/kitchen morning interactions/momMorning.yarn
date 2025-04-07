@@ -1,5 +1,21 @@
-﻿title: momMorning
-tags:
+﻿title: momMorning1
 ---
+<<declare $momInteractions = 0>>
+Good morning.
+<<set $momInteractions = $momInteractions + 1>>
+===
 
+
+title: momMorning2
+---
+What do you want?
+I'm busy too, you know.
+<<set $momInteractions = $momInteractions + 1>>
+===
+
+
+title: momMorningUnlimited
+---
+...
+<<set $momInteractions = $momInteractions + 1>>
 ===

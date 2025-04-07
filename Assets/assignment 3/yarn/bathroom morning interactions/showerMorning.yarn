@@ -1,5 +1,14 @@
-﻿title: showerMorning
-tags:
+﻿title: showerMorning1
 ---
+<<declare $showerInteractions = 0>>
+I feel disgusting.
+Time for a shower.
+<<set $showerInteractions = $showerInteractions + 1>>
+===
 
+
+title: showerMorningUnlimited
+---
+I'm already clean enough as is.
+<<set $showerInteractions = $showerInteractions + 1>>
 ===

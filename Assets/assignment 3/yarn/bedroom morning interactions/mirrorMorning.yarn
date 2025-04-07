@@ -1,5 +1,29 @@
-﻿title: mirrorMorning
-tags:
+﻿title: mirrorMorningInteraction1
 ---
-
+<<declare $mirrorInteractions = 0>>
+Meh. Same old me.
+Nothing special.
+<<set $mirrorInteractions = $mirrrorInterations + 1>>
 ===
+
+
+title: mirrorMorningNotChanged
+---
+Ugh. Same old JJ; sad and disgusting.
+<<set $mirrorInteractions = $mirrrorInterations + 1>>
+===
+
+
+title: mirrorMorningInteraction2
+---
+I wish you would show me anyone else, mirror.
+<<set $mirrorInteractions = $mirrrorInterations + 1>>
+===
+
+
+title: mirrorMorningUnlimited
+---
+I really don't think I can look at myself anymore.
+<<set $mirrorInteractions = $mirrrorInterations + 1>>
+===
+

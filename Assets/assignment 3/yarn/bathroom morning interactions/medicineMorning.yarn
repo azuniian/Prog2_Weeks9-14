@@ -1,5 +1,28 @@
-﻿title: medicineMorning
-tags:
+﻿title: medicineMorning1
 ---
+<<declare $pillsInteractions = 0>>
+I should probably take these...
+<<set $pillsInteractions = $pillsInteractions + 1>>
+===
 
+
+title: medicineMorning2
+---
+Would taking more help...?
+<<set $pillsInteractions = $pillsInteractions + 1>>
+==
+
+
+title: medicineMorning3
+---
+The sadness is still there.
+Maybe just a couple more?
+<<set $pillsInteractions = $pillsInteractions + 1>>
+==
+
+
+title: medicineMorningUnlimited
+---
+I don't think I should take any more.
+<<set $pillsInteractions = $pillsInteractions + 1>>
 ===

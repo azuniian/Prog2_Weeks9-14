@@ -1,5 +1,7 @@
 ﻿title: bedroomDoorExit
 tags:
 ---
-
+<<declare $doorInteractions = 0>>
+Time to start the day...I guess.
+<<set $doorInteractions = $doorInteractions + 1>>
 ===

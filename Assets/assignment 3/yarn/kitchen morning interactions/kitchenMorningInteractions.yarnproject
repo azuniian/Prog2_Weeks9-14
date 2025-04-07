@@ -1,9 +1,8 @@
 {
   "projectFileVersion": 2,
   "sourceFiles": [
-    "**/frontDoorExit.yarn",
     "**/momMorning.yarn",
-    "**/stairsUp.yarn"
+    "**/fridgeMorning.yarn"
   ],
   "excludeFiles": [
     "**/*~/*"

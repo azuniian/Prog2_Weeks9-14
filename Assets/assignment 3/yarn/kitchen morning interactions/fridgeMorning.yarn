@@ -1,0 +1,13 @@
+﻿title: fridgeMorning1
+---
+<<declare $fridgeInteractions = 0>>
+At least if I eat something, my stomach will be full.
+<<set $fridgeInteractions = $fridgeInteractions + 1>>
+===
+
+
+title: fridgeMorningUnlimited
+---
+It's bad enough that I can't look at myself in the mirror; it'd be worse if I had to see my reflection in a toilet bowl.
+<<set $fridgeInteractions = $fridgeInteractions + 1>>
+===
