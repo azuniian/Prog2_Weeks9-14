@@ -1,6 +1,8 @@
 ﻿title: mirrorMorningInteraction1
 ---
 <<declare $mirrorInteractions = 0>>
+<<declare $isChanged>>
+<<set $isChanged = true>>
 Meh. Same old me.
 Nothing special.
 <<set $mirrorInteractions = $mirrrorInterations + 1>>
@@ -9,6 +11,7 @@ Nothing special.
 
 title: mirrorMorningNotChanged
 ---
+<<set $isChanged = false>>
 Ugh. Same old JJ; sad and disgusting.
 <<set $mirrorInteractions = $mirrrorInterations + 1>>
 ===
