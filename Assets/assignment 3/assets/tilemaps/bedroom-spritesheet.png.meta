@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 74af436efa0d2cc4eb7f2335310f8daa
+guid: 23017aa95651f1f4caf4a65ba523a2cd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,117 +97,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: locker2
+      name: wall
       rect:
         serializedVersion: 2
-        x: 436
-        y: 0
-        width: 48
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d2ad68131d79bf42a385549ec8cd9ce
-      internalID: -698344831
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: locker1
-      rect:
-        serializedVersion: 2
-        x: 388
-        y: 0
-        width: 48
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10dcd35ec927abc4291564d0c1a593dc
-      internalID: -440389089
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pink poster
-      rect:
-        serializedVersion: 2
-        x: 357
-        y: 113
-        width: 30
-        height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 603429bd6fd6b8f498a35245245a0856
-      internalID: 1045669215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: green poster
-      rect:
-        serializedVersion: 2
-        x: 293
-        y: 129
-        width: 62
-        height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0e471107d3daf9499410ebd1f830d25
-      internalID: -1968081771
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: purple poster
-      rect:
-        serializedVersion: 2
-        x: 260
-        y: 96
-        width: 31
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fade783fb186bc5429a68d09ce00813c
-      internalID: -677685522
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hardwood
-      rect:
-        serializedVersion: 2
-        x: 116
-        y: 128
-        width: 144
+        x: 864
+        y: 304
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -216,20 +111,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b188bd44bd44f64f958a06525ca6d85
-      internalID: -1880780207
+      spriteID: 213d35a298c20484f910ca7cf6a07dd5
+      internalID: -1914961577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles
+      name: wardrobe
       rect:
         serializedVersion: 2
-        x: 68
+        x: 784
+        y: 16
+        width: 80
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b558b75392b122947b08ad9503c8ecbc
+      internalID: -1089704507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mirror
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 192
+        width: 112
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ac750942a091a42b29a56de0e1c182
+      internalID: 792790302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desk
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 160
+        height: 336
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb0828e9cc299d4ca3ce8f17c69a34d
+      internalID: 778794887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vanity
+      rect:
+        serializedVersion: 2
+        x: 384
         y: 112
-        width: 48
-        height: 48
+        width: 128
+        height: 224
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7aa83f86af6e7345a815e0ff5dbcb5e
-      internalID: -419730241
+      spriteID: e63e947640da1e844a487e26ab2e45ce
+      internalID: 655451084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: top right corner
+      name: bed
       rect:
         serializedVersion: 2
-        x: 116
-        y: 112
-        width: 16
-        height: 16
+        x: 128
+        y: 48
+        width: 256
+        height: 287
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,83 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 664cc8e95f9ada745a960629cddd0547
-      internalID: -152599250
+      spriteID: f1a56b370003cb445b5243031fb90812
+      internalID: -518841045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bottom right corner
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e57b9cd2e6d480439e74571bd896b12
-      internalID: -1808095837
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: vertical edge
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 112
-        width: 16
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34473605a24d87d46885b2eae6808eae
-      internalID: 1328323661
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: horizontal edge
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 96
-        width: 48
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8baa32c31220497468b467010ed43e21
-      internalID: -538737497
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bottom left corner
+      name: big pillow
       rect:
         serializedVersion: 2
         x: 0
-        y: 108
-        width: 4
-        height: 4
+        y: 143
+        width: 128
+        height: 97
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b9ca871b99af6d4d87f1c7843b43014
-      internalID: 1321666450
+      spriteID: ee863b0d4d8a5cd478499de1b6f655e4
+      internalID: -2130254254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: top left corner
+      name: flat pillow
       rect:
         serializedVersion: 2
         x: 0
-        y: 112
-        width: 4
-        height: 4
+        y: 240
+        width: 128
+        height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,29 +258,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e386da9becdf585439d758a510ca2f50
-      internalID: 1304830494
+      spriteID: d736e08178397f44e92da5d5705bcf2c
+      internalID: 34387839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: corkboard
+      name: decor pillow
       rect:
         serializedVersion: 2
-        x: 4
-        y: 112
-        width: 48
-        height: 48
+        x: 16
+        y: 272
+        width: 112
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 722c928795507a945afb9947947a4ee2
-      internalID: -880897190
+      spriteID: b6bce94ccc55286468c9ddbd576a5642
+      internalID: 1220687928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: makeup box
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 112
+        width: 47
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fae82750d5e7d14daa680ec1c6e99e9
+      internalID: -1961318018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: makeup
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 112
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe36a4ef36db054e9f6a81deff877a9
+      internalID: 764900385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medication
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 144
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3617be3130a4cbc43a86092fed770beb
+      internalID: -1669413771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: book3
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 144
+        width: 6
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aabfaa4e62fed024d8d156dedfef0182
+      internalID: 1286724248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: book2
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 144
+        width: 9
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c7ad191078c5d48b6cb0cd10d929c4
+      internalID: 1118202178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: book1
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 144
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d12e79f50f021442b7dcf5ee62aaab6
+      internalID: -1841641215
       vertices: []
       indices: 
       edges: []
@@ -394,27 +415,28 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bottom left corner: 1321666450
-      bottom right corner: -1808095837
-      corkboard: -880897190
-      green poster: -1968081771
-      hardwood: -1880780207
-      horizontal edge: -538737497
-      locker1: -440389089
-      locker2: -698344831
-      pink poster: 1045669215
-      purple poster: -677685522
-      tiles: -419730241
-      top left corner: 1304830494
-      top right corner: -152599250
-      vertical edge: 1328323661
+      bed: -518841045
+      big pillow: -2130254254
+      book1: -1841641215
+      book2: 1118202178
+      book3: 1286724248
+      decor pillow: 1220687928
+      desk: 778794887
+      flat pillow: 34387839
+      makeup: 764900385
+      makeup box: -1961318018
+      medication: -1669413771
+      mirror: 792790302
+      vanity: 655451084
+      wall: -1914961577
+      wardrobe: -1089704507
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
