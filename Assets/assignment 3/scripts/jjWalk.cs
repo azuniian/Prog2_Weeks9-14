@@ -17,12 +17,15 @@ public class jjWalk : MonoBehaviour
     public Tilemap floorTiles;
     public List<Tile> hardwood = new List<Tile>();
 
-    
+    IEnumerator pause;
+    bool dialogueIsRunning;
+
 
     void Start()
     {
         interactionCheck jjScript = JJ.GetComponent<interactionCheck>();
-        jjScript.onSpacePress.AddListener(pauseMovement);
+        jjScript.onSpacePress.AddListener(stopFunction);
+        dialogueIsRunning = jjScript.isDialogueRunning;
     }
 
     void Update()
@@ -50,13 +53,27 @@ public class jjWalk : MonoBehaviour
 
         position.z = 0;
 
+
+
         JJ.transform.position = position;
         positionOnGrid = floorTiles.WorldToCell(position);
-            
+
     }
 
-    public void pauseMovement()
+    public void stopFunction()
+    {
+        pause = pauseMovement();
+        StartCoroutine(pauseMovement());
+    }
+
+    public IEnumerator pauseMovement()
     {
         Debug.Log("Stopping");
+        while(dialogueIsRunning == true)
+        {
+            direction = 0;
+            upOrDown = 0;
+            yield return null;
+        }
     }
 }

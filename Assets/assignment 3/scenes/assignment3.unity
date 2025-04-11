@@ -946,6 +946,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7829832be5e13f42af83face7d61010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  JJ: {fileID: 273045688}
+  dialogueRunner: {fileID: 3619025904808324798, guid: 0c340ed4574efe940abf5172b227dc8c, type: 3}
   onSpacePress:
     m_PersistentCalls:
       m_Calls: []
@@ -1086,6 +1088,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3c001a8dac7e4064fbdd5ede10d6fedc, type: 2}
   - {fileID: 11400000, guid: 98365e14a9e13054b894154f7932a4fa, type: 2}
   - {fileID: 11400000, guid: 8f569262145bb4a46921c7ecbb220d0d, type: 2}
+  jjPos: {x: 0, y: 0, z: 0}
+  isDialogueRunning: 0
 --- !u!114 &273045694
 MonoBehaviour:
   m_ObjectHideFlags: 0

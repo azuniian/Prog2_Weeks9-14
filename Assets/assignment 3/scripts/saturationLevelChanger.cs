@@ -56,7 +56,7 @@ public class saturationLevelChanger : MonoBehaviour
 
     public void SaturationLevelChanger()
     {
-        Debug.Log("listener added and working");
+        //Debug.Log("listener added and working");
         //checking which interaction type
         if (mirrorInteract == true)
         {
