@@ -17,8 +17,7 @@ public class interactionCheck : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("space");
-            StartCoroutine(checkInteraction());
+            onSpacePress.Invoke();
         }
     }
 
