@@ -375,7 +375,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_12
+      name: vanity
       rect:
         serializedVersion: 2
         x: 384
@@ -396,7 +396,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_13
+      name: vanity2
       rect:
         serializedVersion: 2
         x: 416
@@ -417,7 +417,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_14
+      name: vanity3
       rect:
         serializedVersion: 2
         x: 448
@@ -438,7 +438,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_15
+      name: vanity4
       rect:
         serializedVersion: 2
         x: 480
@@ -459,7 +459,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_16
+      name: desk1
       rect:
         serializedVersion: 2
         x: 512
@@ -480,7 +480,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_17
+      name: desk2
       rect:
         serializedVersion: 2
         x: 544
@@ -501,7 +501,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_18
+      name: desk3
       rect:
         serializedVersion: 2
         x: 576
@@ -522,7 +522,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_19
+      name: desk4
       rect:
         serializedVersion: 2
         x: 608
@@ -543,7 +543,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_20
+      name: desk5
       rect:
         serializedVersion: 2
         x: 640
@@ -564,7 +564,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_21
+      name: mirror1
       rect:
         serializedVersion: 2
         x: 672
@@ -585,7 +585,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_22
+      name: mirror2
       rect:
         serializedVersion: 2
         x: 704
@@ -606,7 +606,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_23
+      name: mirror3
       rect:
         serializedVersion: 2
         x: 736
@@ -627,7 +627,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_24
+      name: mirror4
       rect:
         serializedVersion: 2
         x: 768
@@ -648,7 +648,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_25
+      name: wardrobe1
       rect:
         serializedVersion: 2
         x: 800
@@ -669,7 +669,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_26
+      name: wardrobe2
       rect:
         serializedVersion: 2
         x: 832
@@ -690,7 +690,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_27
+      name: wall
       rect:
         serializedVersion: 2
         x: 864
@@ -963,7 +963,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_40
+      name: vanity5
       rect:
         serializedVersion: 2
         x: 384
@@ -984,7 +984,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_41
+      name: vanity6
       rect:
         serializedVersion: 2
         x: 416
@@ -1005,7 +1005,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_42
+      name: vanity7
       rect:
         serializedVersion: 2
         x: 448
@@ -1026,7 +1026,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_43
+      name: vanity8
       rect:
         serializedVersion: 2
         x: 480
@@ -1047,7 +1047,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_44
+      name: desk6
       rect:
         serializedVersion: 2
         x: 512
@@ -1068,7 +1068,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_45
+      name: desk7
       rect:
         serializedVersion: 2
         x: 544
@@ -1089,7 +1089,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_46
+      name: desk8
       rect:
         serializedVersion: 2
         x: 576
@@ -1110,7 +1110,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_47
+      name: desk9
       rect:
         serializedVersion: 2
         x: 608
@@ -1131,7 +1131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_48
+      name: desk10
       rect:
         serializedVersion: 2
         x: 640
@@ -1152,7 +1152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_49
+      name: mirror5
       rect:
         serializedVersion: 2
         x: 672
@@ -1173,7 +1173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_50
+      name: mirror6
       rect:
         serializedVersion: 2
         x: 704
@@ -1194,7 +1194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_51
+      name: mirror7
       rect:
         serializedVersion: 2
         x: 736
@@ -1215,7 +1215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_52
+      name: mirror8
       rect:
         serializedVersion: 2
         x: 768
@@ -1236,7 +1236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_53
+      name: wardrobe3
       rect:
         serializedVersion: 2
         x: 800
@@ -1257,7 +1257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_54
+      name: wardrobe4
       rect:
         serializedVersion: 2
         x: 832
@@ -1530,7 +1530,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_67
+      name: vanity9
       rect:
         serializedVersion: 2
         x: 384
@@ -1551,7 +1551,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_68
+      name: vanity10
       rect:
         serializedVersion: 2
         x: 416
@@ -1572,7 +1572,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_69
+      name: vanity11
       rect:
         serializedVersion: 2
         x: 448
@@ -1593,7 +1593,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_70
+      name: vanity12
       rect:
         serializedVersion: 2
         x: 480
@@ -1614,7 +1614,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_71
+      name: desk11
       rect:
         serializedVersion: 2
         x: 512
@@ -1635,7 +1635,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_72
+      name: desk12
       rect:
         serializedVersion: 2
         x: 544
@@ -1656,7 +1656,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_73
+      name: desk13
       rect:
         serializedVersion: 2
         x: 576
@@ -1677,7 +1677,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_74
+      name: desk14
       rect:
         serializedVersion: 2
         x: 608
@@ -1698,7 +1698,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_75
+      name: desk15
       rect:
         serializedVersion: 2
         x: 640
@@ -1719,7 +1719,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_76
+      name: mirror9
       rect:
         serializedVersion: 2
         x: 672
@@ -1740,7 +1740,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_77
+      name: mirror10
       rect:
         serializedVersion: 2
         x: 704
@@ -1761,7 +1761,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_78
+      name: mirror11
       rect:
         serializedVersion: 2
         x: 736
@@ -1782,7 +1782,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_79
+      name: mirror12
       rect:
         serializedVersion: 2
         x: 768
@@ -1803,7 +1803,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_80
+      name: wardrobe5
       rect:
         serializedVersion: 2
         x: 800
@@ -1824,7 +1824,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_81
+      name: wardrobe6
       rect:
         serializedVersion: 2
         x: 832
@@ -2013,7 +2013,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bed
+      name: bed29
       rect:
         serializedVersion: 2
         x: 256
@@ -2097,7 +2097,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_94
+      name: vanity13
       rect:
         serializedVersion: 2
         x: 384
@@ -2118,7 +2118,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_95
+      name: vanity14
       rect:
         serializedVersion: 2
         x: 480
@@ -2139,7 +2139,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_96
+      name: desk16
       rect:
         serializedVersion: 2
         x: 512
@@ -2160,7 +2160,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_97
+      name: desk17
       rect:
         serializedVersion: 2
         x: 544
@@ -2181,7 +2181,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_98
+      name: desk18
       rect:
         serializedVersion: 2
         x: 576
@@ -2202,7 +2202,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_99
+      name: desk19
       rect:
         serializedVersion: 2
         x: 608
@@ -2223,7 +2223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_100
+      name: desk20
       rect:
         serializedVersion: 2
         x: 640
@@ -2244,7 +2244,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_101
+      name: mirror13
       rect:
         serializedVersion: 2
         x: 672
@@ -2265,7 +2265,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_102
+      name: mirror14
       rect:
         serializedVersion: 2
         x: 704
@@ -2286,7 +2286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_103
+      name: mirror15
       rect:
         serializedVersion: 2
         x: 736
@@ -2307,7 +2307,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_104
+      name: mirror16
       rect:
         serializedVersion: 2
         x: 768
@@ -2328,7 +2328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_105
+      name: wardrobe7
       rect:
         serializedVersion: 2
         x: 800
@@ -2349,7 +2349,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_106
+      name: wardrobe8
       rect:
         serializedVersion: 2
         x: 832
@@ -2622,7 +2622,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_119
+      name: vanity15
       rect:
         serializedVersion: 2
         x: 384
@@ -2643,7 +2643,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_120
+      name: vanity16
       rect:
         serializedVersion: 2
         x: 480
@@ -2664,7 +2664,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_121
+      name: desk21
       rect:
         serializedVersion: 2
         x: 512
@@ -2685,7 +2685,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_122
+      name: desk22
       rect:
         serializedVersion: 2
         x: 544
@@ -2706,7 +2706,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_123
+      name: desk23
       rect:
         serializedVersion: 2
         x: 576
@@ -2727,7 +2727,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_124
+      name: desk24
       rect:
         serializedVersion: 2
         x: 608
@@ -2748,7 +2748,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_125
+      name: desk25
       rect:
         serializedVersion: 2
         x: 640
@@ -2769,7 +2769,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_126
+      name: mirror17
       rect:
         serializedVersion: 2
         x: 672
@@ -2790,7 +2790,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_127
+      name: mirror18
       rect:
         serializedVersion: 2
         x: 704
@@ -2811,7 +2811,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_128
+      name: mirror19
       rect:
         serializedVersion: 2
         x: 736
@@ -2832,7 +2832,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_129
+      name: mirror20
       rect:
         serializedVersion: 2
         x: 768
@@ -2853,7 +2853,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_130
+      name: wardrobe9
       rect:
         serializedVersion: 2
         x: 800
@@ -2874,7 +2874,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_131
+      name: wardrobe10
       rect:
         serializedVersion: 2
         x: 832
@@ -3147,7 +3147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_144
+      name: vanity17
       rect:
         serializedVersion: 2
         x: 384
@@ -3168,7 +3168,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_145
+      name: vanity18
       rect:
         serializedVersion: 2
         x: 480
@@ -3189,7 +3189,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_146
+      name: desk26
       rect:
         serializedVersion: 2
         x: 512
@@ -3210,7 +3210,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_147
+      name: desk27
       rect:
         serializedVersion: 2
         x: 544
@@ -3231,7 +3231,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_148
+      name: desk28
       rect:
         serializedVersion: 2
         x: 576
@@ -3252,7 +3252,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_149
+      name: desk29
       rect:
         serializedVersion: 2
         x: 608
@@ -3273,7 +3273,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_150
+      name: desk30
       rect:
         serializedVersion: 2
         x: 640
@@ -3294,7 +3294,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_151
+      name: books1
       rect:
         serializedVersion: 2
         x: 704
@@ -3315,7 +3315,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_152
+      name: wardrobe11
       rect:
         serializedVersion: 2
         x: 800
@@ -3336,7 +3336,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_153
+      name: wardrobe12
       rect:
         serializedVersion: 2
         x: 832
@@ -3525,7 +3525,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_162
+      name: vanity19
       rect:
         serializedVersion: 2
         x: 384
@@ -3546,7 +3546,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_163
+      name: vanity20
       rect:
         serializedVersion: 2
         x: 480
@@ -3567,7 +3567,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_164
+      name: desk31
       rect:
         serializedVersion: 2
         x: 512
@@ -3588,7 +3588,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_165
+      name: desk32
       rect:
         serializedVersion: 2
         x: 544
@@ -3609,7 +3609,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_166
+      name: desk33
       rect:
         serializedVersion: 2
         x: 576
@@ -3630,7 +3630,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_167
+      name: desk34
       rect:
         serializedVersion: 2
         x: 608
@@ -3651,7 +3651,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_168
+      name: desk35
       rect:
         serializedVersion: 2
         x: 640
@@ -3672,7 +3672,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_169
+      name: meds
       rect:
         serializedVersion: 2
         x: 672
@@ -3693,7 +3693,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_170
+      name: books2
       rect:
         serializedVersion: 2
         x: 704
@@ -3714,7 +3714,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_171
+      name: box1
       rect:
         serializedVersion: 2
         x: 736
@@ -3735,7 +3735,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_172
+      name: box2
       rect:
         serializedVersion: 2
         x: 768
@@ -3756,7 +3756,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_173
+      name: wardrobe13
       rect:
         serializedVersion: 2
         x: 800
@@ -3777,7 +3777,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_174
+      name: wardrobe14
       rect:
         serializedVersion: 2
         x: 832
@@ -3819,7 +3819,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 58
+      name: bed58
       rect:
         serializedVersion: 2
         x: 160
@@ -3840,7 +3840,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 59
+      name: bed59
       rect:
         serializedVersion: 2
         x: 192
@@ -4008,7 +4008,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_185
+      name: desk36
       rect:
         serializedVersion: 2
         x: 512
@@ -4092,7 +4092,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_189
+      name: desk37
       rect:
         serializedVersion: 2
         x: 640
@@ -4113,7 +4113,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_190
+      name: makeup1
       rect:
         serializedVersion: 2
         x: 704
@@ -4134,7 +4134,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_191
+      name: wardrobe15
       rect:
         serializedVersion: 2
         x: 800
@@ -4155,7 +4155,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_192
+      name: wardrobe16
       rect:
         serializedVersion: 2
         x: 832
@@ -4260,7 +4260,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_197
+      name: desk38
       rect:
         serializedVersion: 2
         x: 512
@@ -4281,7 +4281,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_198
+      name: desk39
       rect:
         serializedVersion: 2
         x: 640
@@ -4302,7 +4302,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_199
+      name: wardrobe17
       rect:
         serializedVersion: 2
         x: 800
@@ -4323,7 +4323,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_200
+      name: wardrobe18
       rect:
         serializedVersion: 2
         x: 832
@@ -4344,7 +4344,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_201
+      name: desk40
       rect:
         serializedVersion: 2
         x: 512
@@ -4365,7 +4365,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_202
+      name: desk41
       rect:
         serializedVersion: 2
         x: 640
@@ -4386,7 +4386,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_203
+      name: wardrobe19
       rect:
         serializedVersion: 2
         x: 800
@@ -4407,7 +4407,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_204
+      name: wardrobe20
       rect:
         serializedVersion: 2
         x: 832
@@ -4428,7 +4428,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_205
+      name: desk42
       rect:
         serializedVersion: 2
         x: 512
@@ -4449,7 +4449,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_spritesheet_resized_206
+      name: desk43
       rect:
         serializedVersion: 2
         x: 640
@@ -4480,9 +4480,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      58: 1838535801
-      59: 1754701517
-      bed: -960392614
       bed1: 1696065475
       bed10: 1310081986
       bed11: 1264171501
@@ -4504,6 +4501,7 @@ TextureImporter:
       bed26: -997704036
       bed27: -5481006
       bed28: 210070154
+      bed29: -960392614
       bed3: -658916888
       bed30: 1900141690
       bed31: -1547973676
@@ -4535,6 +4533,8 @@ TextureImporter:
       bed55: -493557296
       bed56: 2080137293
       bed57: 1094308378
+      bed58: 1838535801
+      bed59: 1754701517
       bed6: -509800754
       bed60: 1874117001
       bed61: 992672223
@@ -4548,121 +4548,15 @@ TextureImporter:
       bed7: 943051966
       bed8: -1875702053
       bed9: 719531468
-      bedroom_spritesheet_resized_100: 738814887
-      bedroom_spritesheet_resized_101: 1672174471
-      bedroom_spritesheet_resized_102: 1339452557
-      bedroom_spritesheet_resized_103: -1963390797
-      bedroom_spritesheet_resized_104: 2043740243
-      bedroom_spritesheet_resized_105: 1425933628
-      bedroom_spritesheet_resized_106: 2145673080
-      bedroom_spritesheet_resized_119: 1286673359
-      bedroom_spritesheet_resized_12: -1113645972
-      bedroom_spritesheet_resized_120: -1548878831
-      bedroom_spritesheet_resized_121: -464572742
-      bedroom_spritesheet_resized_122: 213807975
-      bedroom_spritesheet_resized_123: 2061353860
-      bedroom_spritesheet_resized_124: 1765344016
-      bedroom_spritesheet_resized_125: -483571159
-      bedroom_spritesheet_resized_126: -1031811205
-      bedroom_spritesheet_resized_127: -311148925
-      bedroom_spritesheet_resized_128: -1924535016
-      bedroom_spritesheet_resized_129: -1234218280
-      bedroom_spritesheet_resized_13: 42752403
-      bedroom_spritesheet_resized_130: -1949430010
-      bedroom_spritesheet_resized_131: -1551029181
-      bedroom_spritesheet_resized_14: 2141401157
-      bedroom_spritesheet_resized_144: -1961695696
-      bedroom_spritesheet_resized_145: -151667608
-      bedroom_spritesheet_resized_146: 675375531
-      bedroom_spritesheet_resized_147: -545012471
-      bedroom_spritesheet_resized_148: -1012097652
-      bedroom_spritesheet_resized_149: 1801191300
-      bedroom_spritesheet_resized_15: 1064658087
-      bedroom_spritesheet_resized_150: -1054220743
-      bedroom_spritesheet_resized_151: -2054196488
-      bedroom_spritesheet_resized_152: -1192869980
-      bedroom_spritesheet_resized_153: -862073656
-      bedroom_spritesheet_resized_16: 547153964
-      bedroom_spritesheet_resized_162: -1054940362
-      bedroom_spritesheet_resized_163: -1189558328
-      bedroom_spritesheet_resized_164: -1268938242
-      bedroom_spritesheet_resized_165: 816362477
-      bedroom_spritesheet_resized_166: -79386033
-      bedroom_spritesheet_resized_167: -186408883
-      bedroom_spritesheet_resized_168: 2116952485
-      bedroom_spritesheet_resized_169: -204117719
-      bedroom_spritesheet_resized_17: -1984087744
-      bedroom_spritesheet_resized_170: -854249319
-      bedroom_spritesheet_resized_171: -724480756
-      bedroom_spritesheet_resized_172: 988382737
-      bedroom_spritesheet_resized_173: -1938020371
-      bedroom_spritesheet_resized_174: 760996929
-      bedroom_spritesheet_resized_18: -324608557
       bedroom_spritesheet_resized_183: -1930282555
       bedroom_spritesheet_resized_184: -421287676
-      bedroom_spritesheet_resized_185: 1342546461
       bedroom_spritesheet_resized_186: -1738625721
       bedroom_spritesheet_resized_187: -127320311
       bedroom_spritesheet_resized_188: -490821891
-      bedroom_spritesheet_resized_189: 1638563248
-      bedroom_spritesheet_resized_19: 1163133228
-      bedroom_spritesheet_resized_190: -1582713993
-      bedroom_spritesheet_resized_191: 243890509
-      bedroom_spritesheet_resized_192: 1675450594
-      bedroom_spritesheet_resized_197: 1917097469
-      bedroom_spritesheet_resized_198: -1394522852
-      bedroom_spritesheet_resized_199: -609122913
-      bedroom_spritesheet_resized_20: 101076228
-      bedroom_spritesheet_resized_200: -2035316114
-      bedroom_spritesheet_resized_201: -508281589
-      bedroom_spritesheet_resized_202: -293548009
-      bedroom_spritesheet_resized_203: 2131390090
-      bedroom_spritesheet_resized_204: -102507308
-      bedroom_spritesheet_resized_205: 1029767221
-      bedroom_spritesheet_resized_206: 100003533
-      bedroom_spritesheet_resized_21: 1751856756
-      bedroom_spritesheet_resized_22: 990098523
-      bedroom_spritesheet_resized_23: -194771961
-      bedroom_spritesheet_resized_24: 734849710
-      bedroom_spritesheet_resized_25: -1861139500
-      bedroom_spritesheet_resized_26: -493883280
-      bedroom_spritesheet_resized_27: -1816543202
-      bedroom_spritesheet_resized_40: 548574996
-      bedroom_spritesheet_resized_41: -1124947198
-      bedroom_spritesheet_resized_42: 68441475
-      bedroom_spritesheet_resized_43: 1967778677
-      bedroom_spritesheet_resized_44: 634745130
-      bedroom_spritesheet_resized_45: 1702646393
-      bedroom_spritesheet_resized_46: -789957905
-      bedroom_spritesheet_resized_47: 22196486
-      bedroom_spritesheet_resized_48: -358447115
-      bedroom_spritesheet_resized_49: 760410416
-      bedroom_spritesheet_resized_50: -656101980
-      bedroom_spritesheet_resized_51: -2048891744
-      bedroom_spritesheet_resized_52: 1418451029
-      bedroom_spritesheet_resized_53: -1122157044
-      bedroom_spritesheet_resized_54: -243039895
-      bedroom_spritesheet_resized_67: 602100658
-      bedroom_spritesheet_resized_68: 165275435
-      bedroom_spritesheet_resized_69: -1405140385
-      bedroom_spritesheet_resized_70: 440714312
-      bedroom_spritesheet_resized_71: 1526375161
-      bedroom_spritesheet_resized_72: -612426705
-      bedroom_spritesheet_resized_73: -1539695134
-      bedroom_spritesheet_resized_74: 2005346185
-      bedroom_spritesheet_resized_75: -331576787
-      bedroom_spritesheet_resized_76: -841967436
-      bedroom_spritesheet_resized_77: 198121063
-      bedroom_spritesheet_resized_78: 1479286747
-      bedroom_spritesheet_resized_79: 537672781
-      bedroom_spritesheet_resized_80: -1200114797
-      bedroom_spritesheet_resized_81: -182571600
-      bedroom_spritesheet_resized_94: -1831775716
-      bedroom_spritesheet_resized_95: 345488944
-      bedroom_spritesheet_resized_96: -1296919011
-      bedroom_spritesheet_resized_97: -1351156155
-      bedroom_spritesheet_resized_98: -208159576
-      bedroom_spritesheet_resized_99: -1934896049
+      books1: -2054196488
+      books2: -854249319
+      box1: -724480756
+      box2: 988382737
       bp1: -1803684779
       bp10: -786689780
       bp11: 2036426765
@@ -4675,6 +4569,49 @@ TextureImporter:
       bp7: 993816689
       bp8: 679382904
       bp9: 1373666276
+      desk1: 547153964
+      desk10: -358447115
+      desk11: 1526375161
+      desk12: -612426705
+      desk13: -1539695134
+      desk14: 2005346185
+      desk15: -331576787
+      desk16: -1296919011
+      desk17: -1351156155
+      desk18: -208159576
+      desk19: -1934896049
+      desk2: -1984087744
+      desk20: 738814887
+      desk21: -464572742
+      desk22: 213807975
+      desk23: 2061353860
+      desk24: 1765344016
+      desk25: -483571159
+      desk26: 675375531
+      desk27: -545012471
+      desk28: -1012097652
+      desk29: 1801191300
+      desk3: -324608557
+      desk30: -1054220743
+      desk31: -1268938242
+      desk32: 816362477
+      desk33: -79386033
+      desk34: -186408883
+      desk35: 2116952485
+      desk36: 1342546461
+      desk37: 1638563248
+      desk38: 1917097469
+      desk39: -1394522852
+      desk4: 1163133228
+      desk40: -508281589
+      desk41: -293548009
+      desk42: 1029767221
+      desk43: 100003533
+      desk5: 101076228
+      desk6: 634745130
+      desk7: 1702646393
+      desk8: -789957905
+      desk9: 22196486
       dp1: 165564889
       dp2: 621812325
       dp3: -1407510282
@@ -4683,10 +4620,73 @@ TextureImporter:
       dp6: -897316215
       dp7: -2121853676
       dp8: 1163199758
+      makeup1: -1582713993
+      meds: -204117719
+      mirror1: 1751856756
+      mirror10: 198121063
+      mirror11: 1479286747
+      mirror12: 537672781
+      mirror13: 1672174471
+      mirror14: 1339452557
+      mirror15: -1963390797
+      mirror16: 2043740243
+      mirror17: -1031811205
+      mirror18: -311148925
+      mirror19: -1924535016
+      mirror2: 990098523
+      mirror20: -1234218280
+      mirror3: -194771961
+      mirror4: 734849710
+      mirror5: 760410416
+      mirror6: -656101980
+      mirror7: -2048891744
+      mirror8: 1418451029
+      mirror9: -841967436
       p1: -736400256
       p2: 50831286
       p3: 386611639
       p4: -14642574
+      vanity: -1113645972
+      vanity10: 165275435
+      vanity11: -1405140385
+      vanity12: 440714312
+      vanity13: -1831775716
+      vanity14: 345488944
+      vanity15: 1286673359
+      vanity16: -1548878831
+      vanity17: -1961695696
+      vanity18: -151667608
+      vanity19: -1054940362
+      vanity2: 42752403
+      vanity20: -1189558328
+      vanity3: 2141401157
+      vanity4: 1064658087
+      vanity5: 548574996
+      vanity6: -1124947198
+      vanity7: 68441475
+      vanity8: 1967778677
+      vanity9: 602100658
+      wall: -1816543202
+      wardrobe1: -1861139500
+      wardrobe10: -1551029181
+      wardrobe11: -1192869980
+      wardrobe12: -862073656
+      wardrobe13: -1938020371
+      wardrobe14: 760996929
+      wardrobe15: 243890509
+      wardrobe16: 1675450594
+      wardrobe17: -609122913
+      wardrobe18: -2035316114
+      wardrobe19: 2131390090
+      wardrobe2: -493883280
+      wardrobe20: -102507308
+      wardrobe3: -1122157044
+      wardrobe4: -243039895
+      wardrobe5: -1200114797
+      wardrobe6: -182571600
+      wardrobe7: 1425933628
+      wardrobe8: 2145673080
+      wardrobe9: -1949430010
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
