@@ -6,10 +6,13 @@ using Yarn.Unity;
 public class saturationLevelChanger : MonoBehaviour
 {
     //variables being referenced by other scripts
+    public GameObject JJ;
+    
+    //floats
     float saturationLevel;
 
     //float variables from yarn scripts
-    VariableStorageBehaviour variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
+    VariableStorageBehaviour variableStorage;
     float mirrorInteractions;
     float doorInteractions;
     float wardrobeInteractions;
@@ -30,6 +33,12 @@ public class saturationLevelChanger : MonoBehaviour
     //boolean from yarn script
     bool isChanged;
 
+    private void Start()
+    {
+        variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>(); 
+        interactionCheck jjScript = JJ.GetComponent<interactionCheck>(); //creating a script variable reference to access the custom Unity Event
+        jjScript.onSpacePress.AddListener(SaturationLevelChanger); //adding a listener to reference a function in this script when the Unity Event is triggered in another script
+    }
 
     void Update()
     {
@@ -46,6 +55,7 @@ public class saturationLevelChanger : MonoBehaviour
 
     public void SaturationLevelChanger()
     {
+        //Debug.Log("listener added and working");
         //checking which interaction type
         if (mirrorInteract == true)
         {
