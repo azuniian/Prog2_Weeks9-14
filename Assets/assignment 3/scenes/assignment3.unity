@@ -1111,6 +1111,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611ad9d73a3917f41bb67d502fe7fad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  JJ: {fileID: 273045688}
+  speed: 3
+  direction: 0
+  upOrDown: 0
+  position: {x: 0, y: 0, z: 0}
+  positionOnGrid: {x: 0, y: 0, z: 0}
+  floorTiles: {fileID: 549040565}
+  hardwood:
+  - {fileID: 11400000, guid: ede5123c53291e64888e3e008dc51024, type: 2}
+  - {fileID: 11400000, guid: 6af043357f9b7e74f837231f7c874ad3, type: 2}
+  - {fileID: 11400000, guid: a9f37cd31823abb49b7006f22312998d, type: 2}
+  - {fileID: 11400000, guid: 68e6d4bd6431ce947b1ea1488862f3e5, type: 2}
+  - {fileID: 11400000, guid: d96cd71a97007574cbc75144f83a11a6, type: 2}
 --- !u!1 &340189193
 GameObject:
   m_ObjectHideFlags: 0

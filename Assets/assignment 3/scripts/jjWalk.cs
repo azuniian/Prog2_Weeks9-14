@@ -5,71 +5,58 @@ using UnityEngine.Tilemaps;
 
 public class jjWalk : MonoBehaviour
 {
-    //variables being referenced by other scripts
     public GameObject JJ;
-    
+
     //movement-related variables
-    Vector3 position;
-    Vector3Int positionOnGrid;
-    float speed = 3f;
-    float direction;
+    public float speed = 0.5f;
+    public float direction;
+    public float upOrDown;
+    public Vector3 position;
+    public Vector3Int positionOnGrid;
 
-    //tiles and tilemaps
-    Tilemap floorTiles;
-    Tile hardwood;
+    public Tilemap floorTiles;
+    public List<Tile> hardwood = new List<Tile>();
 
-    //coroutines
-    IEnumerator moveSprite;
+    
 
     void Start()
     {
-        interactionCheck jjScript = JJ.GetComponent<interactionCheck>(); //creating a script variable reference to access the custom Unity Event
-        //jjScript.onSpacePress.AddListener(stopMovement); //adding a listener to reference a function in this script when the Unity Event is triggered in another script
-        moveSprite = updatePos();
+        interactionCheck jjScript = JJ.GetComponent<interactionCheck>();
+        jjScript.onSpacePress.AddListener(pauseMovement);
     }
 
-    // Update is called once per frame
     void Update()
     {
         position = transform.position;
+        direction = Input.GetAxis("Horizontal");
+        upOrDown = Input.GetAxis("Vertical");
+
+        if(direction > 0)
+        {
+            position.x += speed * Time.deltaTime;
+        }
+        else if(direction < 0)
+        {
+            position.x -= speed * Time.deltaTime;
+        }
+        if(upOrDown > 0)
+        {
+            position.y += speed * Time.deltaTime;
+        }
+        else if(upOrDown < 0)
+        {
+            position.y -= speed * Time.deltaTime;
+        }
+
         position.z = 0;
 
-        direction = Input.GetAxis("Horizontal");
-
-        if (direction > 0)
-        {
-            position.x += speed;
-        }
-        else if (direction < 0)
-        {
-            position.x -= speed;
-        }
-        
-        if (Input.GetAxis("Vertical") == 1)
-        {
-            position.y += speed;
-        }
-        else if(Input.GetAxis("Vertical") == -1)
-        {
-            position.y -= speed;
-        }
-
-        while (true)
-        {
-            StartCoroutine(moveSprite);
-        }
-        
-    }
-
-    public IEnumerator updatePos()
-    {
+        JJ.transform.position = position;
         positionOnGrid = floorTiles.WorldToCell(position);
-        Debug.Log(positionOnGrid);
-        yield return null;
+            
     }
 
-    public void stopMovement()
+    public void pauseMovement()
     {
-        StopCoroutine(moveSprite);
+        Debug.Log("Stopping");
     }
 }
