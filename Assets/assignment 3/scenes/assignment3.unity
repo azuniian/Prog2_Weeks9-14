@@ -947,7 +947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JJ: {fileID: 273045688}
-  dialogueRunner: {fileID: 3619025904808324798, guid: 0c340ed4574efe940abf5172b227dc8c, type: 3}
+  dialogueRunner: {fileID: 2712260257710024387, guid: 0c340ed4574efe940abf5172b227dc8c, type: 3}
   onSpacePress:
     m_PersistentCalls:
       m_Calls: []
