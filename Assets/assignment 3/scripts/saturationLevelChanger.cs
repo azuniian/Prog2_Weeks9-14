@@ -9,29 +9,30 @@ public class saturationLevelChanger : MonoBehaviour
     public GameObject JJ;
     
     //floats
-    float saturationLevel;
+    public float saturationLevel;
 
     //float variables from yarn scripts
     VariableStorageBehaviour variableStorage;
-    float mirrorInteractions;
-    float doorInteractions;
-    float wardrobeInteractions;
-    float pillsInteractions;
-    float showerInteractions;
-    float momInteractions;
-    float fridgeInteractions;
+    public float mirrorInteractions;
+    public float doorInteractions;
+    public float wardrobeInteractions;
+    public float pillsInteractions;
+    public float showerInteractions;
+    public float momInteractions;
+    public float fridgeInteractions;
 
     //booleans
-    bool mirrorInteract = false;
-    bool doorInteract = false;
-    bool fridgeInteract = false;
-    bool momInteract = false;
-    bool wardrobeInteract = false;
-    bool pillsInteract = false;
-    bool showerInteract = false;
+    public bool bedInteract = false;
+    public bool mirrorInteract = false;
+    public bool doorInteract = false;
+    public bool fridgeInteract = false;
+    public bool momInteract = false;
+    public bool wardrobeInteract = false;
+    public bool pillsInteract = false;
+    public bool showerInteract = false;
 
     //boolean from yarn script
-    bool isChanged;
+    public bool isChanged;
 
     public void Start()
     {
@@ -51,6 +52,7 @@ public class saturationLevelChanger : MonoBehaviour
         variableStorage.TryGetValue("$momInteractions", out momInteractions); //translating yarn variable for number of mom interactions to C# float
         variableStorage.TryGetValue("$fridgeInteractions", out fridgeInteractions); //translating yarn variable for number of fridge interactions to C# float
         variableStorage.TryGetValue("$isChanged", out isChanged); //translating yarn variable which checks which path was taken to a C# boolean
+        variableStorage.TryGetValue("$bedInteract", out bedInteract); //translating if the bed has been interacted with from a yarn variable to a C# boolean
     }
 
 

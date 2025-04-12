@@ -1,5 +1,7 @@
 ﻿title: bedMorning
 tags:
 ---
+<<declare $bedInteract = false>>
+<<set $bedInteract = true>>
 I don’t want to do this again. There’s no point. 
 ===

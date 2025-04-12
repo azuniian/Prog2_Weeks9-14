@@ -1,6 +1,8 @@
 ﻿title: wardrobeMorningInteraction1
 ---
 <<declare $wardrobeInteractions = 0>>
+<<declare $isChanged = false>>
+<<set $isChanged = true>>
 I should change into something semi-decent...
 Maybe it'll help if it looks like I know who I am.
 <<set $wardrobeInteractions = $wardrobeInteractions + 1>>

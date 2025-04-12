@@ -12,6 +12,7 @@ public class jjWalk : MonoBehaviour
     public float direction;
     public float upOrDown;
     public Vector3 position;
+    public Vector3 posBeforeDialogue;
     public Vector3Int positionOnGrid;
 
     public Tilemap floorTiles;
@@ -23,30 +24,50 @@ public class jjWalk : MonoBehaviour
 
     void Start()
     {
-        interactionCheck jjScript = JJ.GetComponent<interactionCheck>();
-        jjScript.onSpacePress.AddListener(stopFunction);
-        dialogueIsRunning = jjScript.isDialogueRunning;
+        
+        
     }
 
     void Update()
     {
+        interactionCheck jjScript = JJ.GetComponent<interactionCheck>();
+        jjScript.onSpacePress.AddListener(stopFunction);
+        dialogueIsRunning = jjScript.isDialogueRunning;
+
         position = transform.position;
         direction = Input.GetAxis("Horizontal");
         upOrDown = Input.GetAxis("Vertical");
 
-        if(direction > 0)
+        if (direction != 0 || upOrDown != 0)
+        {
+            jjMovement();
+            if(pause != null)
+            {
+                StopCoroutine(pause);
+            }
+        }
+        else if(dialogueIsRunning == true)
+        {
+            stopFunction();
+        }
+
+    }
+
+    public void jjMovement()
+    {
+        if (direction > 0)
         {
             position.x += speed * Time.deltaTime;
         }
-        else if(direction < 0)
+        else if (direction < 0)
         {
             position.x -= speed * Time.deltaTime;
         }
-        if(upOrDown > 0)
+        if (upOrDown > 0)
         {
             position.y += speed * Time.deltaTime;
         }
-        else if(upOrDown < 0)
+        else if (upOrDown < 0)
         {
             position.y -= speed * Time.deltaTime;
         }
@@ -57,24 +78,25 @@ public class jjWalk : MonoBehaviour
 
         JJ.transform.position = position;
         positionOnGrid = floorTiles.WorldToCell(position);
-        Debug.Log(positionOnGrid);
-
+        //Debug.Log(positionOnGrid);
     }
 
     public void stopFunction()
     {
+        posBeforeDialogue = position;
         pause = pauseMovement();
-        StartCoroutine(pauseMovement());
+        StartCoroutine(pause);
     }
 
     public IEnumerator pauseMovement()
     {
-        Debug.Log("Stopping");
         while(dialogueIsRunning == true)
         {
+            JJ.transform.position = posBeforeDialogue;
             direction = 0;
             upOrDown = 0;
             yield return null;
         }
+        dialogueIsRunning = false;
     }
 }
