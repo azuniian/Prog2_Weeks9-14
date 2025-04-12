@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Tilemaps;
+using Yarn.Unity;
 
 public class interactionCheck : MonoBehaviour
 {
     public GameObject JJ;
 
     
-    public GameObject dialogueRunner; //yarn prefab
+    public DialogueRunner dialogueRunner; //yarn prefab
 
     public UnityEvent onSpacePress; //custom unity event which is triggered by a key press
     public Tilemap furnitureTiles; //tilemap which contains all of the furniture tiles that can be interacted with
@@ -24,14 +26,15 @@ public class interactionCheck : MonoBehaviour
 
     void Start()
     {
-        jjWalk moveScript = JJ.GetComponent<jjWalk>();
-        jjPos = moveScript.positionOnGrid;
+        
         
     }
 
     void Update()
     {
-        Debug.Log(furnitureTiles.GetTile(jjPos));
+        jjWalk moveScript = JJ.GetComponent<jjWalk>();
+        jjPos = moveScript.positionOnGrid;
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //StartCoroutine(checkInteraction()); 
@@ -46,8 +49,8 @@ public class interactionCheck : MonoBehaviour
         {
             if(furnitureTiles.GetTile(jjPos) == tile)
             {
-                //dialogueRunner
-                Debug.Log("bed tile");
+                dialogueRunner.StartDialogue("bedMorning");
+                //Debug.Log("bed tile");
                 onSpacePress.Invoke();
             }
             //yield return null;
@@ -58,7 +61,7 @@ public class interactionCheck : MonoBehaviour
             if (furnitureTiles.GetTile(jjPos) == tile)
             {
                 //dialogueRunner
-                Debug.Log("wardrobe tile");
+                //Debug.Log("wardrobe tile");
                 onSpacePress.Invoke();
             }
             //yield return null;

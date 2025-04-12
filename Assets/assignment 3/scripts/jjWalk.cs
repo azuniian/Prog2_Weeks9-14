@@ -57,6 +57,7 @@ public class jjWalk : MonoBehaviour
 
         JJ.transform.position = position;
         positionOnGrid = floorTiles.WorldToCell(position);
+        Debug.Log(positionOnGrid);
 
     }
 
