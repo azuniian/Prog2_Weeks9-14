@@ -23,13 +23,15 @@ public class interactionCheck : MonoBehaviour
     public List<Tile> vanityTiles = new List<Tile>(); //list of vanity tiles
     public List<Tile> insideBedroomDoorTiles = new List<Tile>(); //list of door tiles
 
-    public Vector3Int jjPos;
+    public Vector3 jjPos;
+    public Vector3Int jjPosOnGrid;
 
     public float mirrorInt;
     public float doorInt;
     public float wardrobeInt;
     public bool bedInt;
     public bool isChanged;
+
 
     public bool isDialogueRunning = false;
 
@@ -41,9 +43,9 @@ public class interactionCheck : MonoBehaviour
 
     void Update()
     {
-        //get a reference to the position of JJ on the grid in the walking script
-        jjWalk moveScript = JJ.GetComponent<jjWalk>();
-        jjPos = moveScript.positionOnGrid;
+        //find JJ's empty (used for dialogue sorting) position on the grid
+        jjPos = JJ.transform.position;
+        jjPosOnGrid = furnitureTiles.WorldToCell(jjPos);
 
         //get a reference to the interaction number taken from the yarn script within the saturation level script
         saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
@@ -56,6 +58,7 @@ public class interactionCheck : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log("space pressed");
             //StartCoroutine(checkInteraction()); 
             checkInteraction();
         }
@@ -65,8 +68,12 @@ public class interactionCheck : MonoBehaviour
     {
         foreach(Tile tile in bedTiles)
         {
-            if(furnitureTiles.GetTile(jjPos) == tile)
+            if(furnitureTiles.GetTile(jjPosOnGrid) == tile)
             {
+                //change value of boolean in saturation script to ensure that the function runs properly
+                saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
+                saturationScript.bedInteract = true;
+                
                 bedInt = true;
                 isDialogueRunning = true;
                 dialogueRunner.StartDialogue("bedMorning");
@@ -76,15 +83,19 @@ public class interactionCheck : MonoBehaviour
 
         foreach(Tile tile in wardrobeTiles)
         {
-            if (furnitureTiles.GetTile(jjPos) == tile)
+            if (furnitureTiles.GetTile(jjPosOnGrid) == tile)
             {
                 if(wardrobeInt == 0)
                 {
+                    saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
+                    saturationScript.wardrobeInteract = true;
                     isDialogueRunning = true;
                     dialogueRunner.StartDialogue("wardrobeMorningInteraction1");
                 }
                 else if(wardrobeInt > 0)
                 {
+                    saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
+                    saturationScript.wardrobeInteract = true;
                     isDialogueRunning = true;
                     dialogueRunner.StartDialogue("wardrobeMorningUnlimited");
                 }
@@ -94,25 +105,33 @@ public class interactionCheck : MonoBehaviour
 
         foreach (Tile tile in vanityTiles)
         {
-            if (furnitureTiles.GetTile(jjPos) == tile)
+            if (furnitureTiles.GetTile(jjPosOnGrid) == tile)
             {
                 if(mirrorInt == 0 && isChanged == true)
                 {
+                    saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
+                    saturationScript.mirrorInteract = true;
                     isDialogueRunning = true;
                     dialogueRunner.StartDialogue("mirrorMorningInteraction1");
                 }
                 else if(mirrorInt == 0 && isChanged == false)
                 {
+                    saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
+                    saturationScript.mirrorInteract = true;
                     isDialogueRunning = true;
                     dialogueRunner.StartDialogue("mirrorMorningNotChanged");
                 }
                 else if(mirrorInt == 1)
                 {
+                    saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
+                    saturationScript.mirrorInteract = true;
                     isDialogueRunning = true;
                     dialogueRunner.StartDialogue("mirrorMorningInteraction2");
                 }
                 else if(mirrorInt > 1)
                 {
+                    saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
+                    saturationScript.mirrorInteract = true;
                     isDialogueRunning = true;
                     dialogueRunner.StartDialogue("mirrorMorningUnlimited");
                 }
@@ -120,16 +139,18 @@ public class interactionCheck : MonoBehaviour
             }
         }
        
-        foreach(Tile tile in insideBedroomDoorTiles)
+        foreach(Tile tile in insideBedroomDoorTiles) //checking for bedroom door interaction
         {
-            if (furnitureTiles.GetTile(jjPos) == tile)
+            if (furnitureTiles.GetTile(jjPosOnGrid) == tile) //if JJ is at the bedroom door
             {
-                if(doorInt == 0)
+                if(doorInt == 0) //so the dialogue line only plays the first time you interact with the door
                 {
-                    isDialogueRunning = true;
-                    dialogueRunner.StartDialogue("bedroomDoorExit");
+                    saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
+                    saturationScript.doorInteract = true;
+                    isDialogueRunning = true; //set the dialogue running boolean to true so the stop motion coroutine will start
+                    dialogueRunner.StartDialogue("bedroomDoorExit"); //start specific dialogue
                 }
-                onSpacePress.Invoke();
+                onSpacePress.Invoke(); //calls custom unity event
             }
         }
         
@@ -138,8 +159,8 @@ public class interactionCheck : MonoBehaviour
 
     public void endDialogue() //once all lines of dialogue are finished, remove the listener
     {
-        isDialogueRunning = false;
+        isDialogueRunning = false; //sets the dialogue running value to false so that the coroutine will end
         onSpacePress.RemoveListener(endDialogue);
-        //onDialogueEnd.RemoveAllListeners();
+        onDialogueEnd.RemoveAllListeners(); //removes all listeners relating to this unity event
     }
 }

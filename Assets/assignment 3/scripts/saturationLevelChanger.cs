@@ -58,7 +58,6 @@ public class saturationLevelChanger : MonoBehaviour
 
     public void SaturationLevelChanger()
     {
-        //Debug.Log("listener added and working");
         //checking which interaction type
         if (mirrorInteract == true)
         {
@@ -193,6 +192,8 @@ public class saturationLevelChanger : MonoBehaviour
                 momInteract = false;
             }  
         }
+
+        //after checking which interaction it is, need to ensure that the current sprite matches the saturation level
 
 
     }

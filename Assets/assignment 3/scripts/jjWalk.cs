@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using Yarn.Unity;
 
 public class jjWalk : MonoBehaviour
 {
     public GameObject JJ;
+    public DialogueRunner dialogueRunner;
 
     //movement-related variables
     public float speed = 0.5f;
@@ -16,41 +18,41 @@ public class jjWalk : MonoBehaviour
     public Vector3Int positionOnGrid;
 
     public Tilemap floorTiles;
-    public List<Tile> hardwood = new List<Tile>();
+    public List<Tile> hardwoodTiles = new List<Tile>();
 
     IEnumerator pause;
     bool dialogueIsRunning;
+    public bool onFloor;
 
-
-    void Start()
-    {
-        
-        
-    }
 
     void Update()
     {
         interactionCheck jjScript = JJ.GetComponent<interactionCheck>();
-        jjScript.onSpacePress.AddListener(stopFunction);
+        jjScript.onSpacePress.AddListener(stopMoving);
         dialogueIsRunning = jjScript.isDialogueRunning;
 
         position = transform.position;
+        positionOnGrid = floorTiles.WorldToCell(position);
         direction = Input.GetAxis("Horizontal");
         upOrDown = Input.GetAxis("Vertical");
 
-        if ((direction != 0 || upOrDown != 0) && dialogueIsRunning == false)
+        if (dialogueIsRunning == false)
         {
-            jjMovement();
-            if(pause != null)
+            foreach (Tile tile in hardwoodTiles)
             {
-                StopCoroutine(pause);
+                Debug.Log("checking for floor tile");
+                if (floorTiles.GetTile(positionOnGrid) == tile)
+                {
+                    jjMovement();
+                    onFloor = true;
+                    break;
+                }
             }
-        }
-        else if(dialogueIsRunning == true)
-        {
-            stopFunction();
-        }
 
+
+
+
+        }
     }
 
     public void jjMovement()
@@ -71,24 +73,25 @@ public class jjWalk : MonoBehaviour
         {
             position.y -= speed * Time.deltaTime;
         }
-
+            
         position.z = 0;
-
-
 
         JJ.transform.position = position;
         positionOnGrid = floorTiles.WorldToCell(position);
         //Debug.Log(positionOnGrid);
     }
 
-    public void stopFunction()
+    public void stopMoving()
     {
-        posBeforeDialogue = position;
-        pause = pauseMovement();
-        StartCoroutine(pause);
-        
-        interactionCheck jjScript = JJ.GetComponent<interactionCheck>();
-        jjScript.onDialogueEnd.AddListener(jjScript.endDialogue);
+        if(dialogueIsRunning == true)
+        {
+            posBeforeDialogue = position;
+            pause = pauseMovement();
+            StartCoroutine(pause);
+
+            interactionCheck jjScript = JJ.GetComponent<interactionCheck>();
+            jjScript.onDialogueEnd.AddListener(jjScript.endDialogue);
+        }
     }
 
     public IEnumerator pauseMovement()
@@ -100,9 +103,5 @@ public class jjWalk : MonoBehaviour
             upOrDown = 0;
             yield return null;
         }
-        dialogueIsRunning = false;
-
-        interactionCheck jjScript = JJ.GetComponent<interactionCheck>();
-        jjScript.onDialogueEnd.Invoke();
     }
 }
