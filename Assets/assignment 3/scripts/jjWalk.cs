@@ -38,7 +38,7 @@ public class jjWalk : MonoBehaviour
         direction = Input.GetAxis("Horizontal");
         upOrDown = Input.GetAxis("Vertical");
 
-        if (direction != 0 || upOrDown != 0)
+        if ((direction != 0 || upOrDown != 0) && dialogueIsRunning == false)
         {
             jjMovement();
             if(pause != null)
@@ -86,6 +86,9 @@ public class jjWalk : MonoBehaviour
         posBeforeDialogue = position;
         pause = pauseMovement();
         StartCoroutine(pause);
+        
+        interactionCheck jjScript = JJ.GetComponent<interactionCheck>();
+        jjScript.onDialogueEnd.AddListener(jjScript.endDialogue);
     }
 
     public IEnumerator pauseMovement()
@@ -98,5 +101,8 @@ public class jjWalk : MonoBehaviour
             yield return null;
         }
         dialogueIsRunning = false;
+
+        interactionCheck jjScript = JJ.GetComponent<interactionCheck>();
+        jjScript.onDialogueEnd.Invoke();
     }
 }

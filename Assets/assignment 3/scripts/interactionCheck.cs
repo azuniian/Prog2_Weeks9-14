@@ -15,6 +15,8 @@ public class interactionCheck : MonoBehaviour
     public DialogueRunner dialogueRunner; //yarn prefab
 
     public UnityEvent onSpacePress; //custom unity event which is triggered by a key press
+    public UnityEvent onDialogueEnd; //custom unity event which is triggered when dialogue is done
+
     public Tilemap furnitureTiles; //tilemap which contains all of the furniture tiles that can be interacted with
     public List<Tile> bedTiles = new List<Tile>(); //list of bed tiles
     public List<Tile> wardrobeTiles = new List<Tile>(); //list of wardrobe tiles
@@ -138,5 +140,6 @@ public class interactionCheck : MonoBehaviour
     {
         isDialogueRunning = false;
         onSpacePress.RemoveListener(endDialogue);
+        //onDialogueEnd.RemoveAllListeners();
     }
 }
