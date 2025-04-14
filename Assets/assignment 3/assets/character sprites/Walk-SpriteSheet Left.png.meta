@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walk-SpriteSheet Left_0
+      name: left regular 1
       rect:
         serializedVersion: 2
         x: 0
@@ -275,7 +275,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Walk-SpriteSheet Left_0: -718808826
       Walk-SpriteSheet Left_1: -1986760134
       Walk-SpriteSheet Left_2: -1173019552
       Walk-SpriteSheet Left_3: 1625810
@@ -283,6 +282,7 @@ TextureImporter:
       Walk-SpriteSheet Left_5: -1592909974
       Walk-SpriteSheet Left_6: -2146386344
       Walk-SpriteSheet Left_7: 581205522
+      left regular 1: -718808826
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

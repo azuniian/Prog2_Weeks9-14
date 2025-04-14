@@ -160,7 +160,6 @@ public class interactionCheck : MonoBehaviour
     public void endDialogue() //once all lines of dialogue are finished, remove the listener
     {
         isDialogueRunning = false; //sets the dialogue running value to false so that the coroutine will end
-        onSpacePress.RemoveListener(endDialogue);
-        onDialogueEnd.RemoveAllListeners(); //removes all listeners relating to this unity event
+        onDialogueEnd.RemoveAllListeners(); //removes all listeners relating to this unity event (i.e. hard reset of the game condition)
     }
 }

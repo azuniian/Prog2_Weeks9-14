@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a9e21b60583ef2143aa81f58ed58f601
+guid: 67c9712e6fd68b74f947a7f9cf9d85f3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,169 +97,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walk-SpriteSheet Right_0
+      name: left low 1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 224
+        width: 62
+        height: 218
       alignment: 9
-      pivot: {x: 0.524852, y: 0.08461543}
+      pivot: {x: 0.48509666, y: 0.033908762}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2f2a14c4a17a9f479102b691b8042f6
-      internalID: 1740121865
+      spriteID: c6ca3b6386558a8468953ec363e920e4
+      internalID: -1584798804
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk-SpriteSheet Right_1
+      name: looking left walks low saturation_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 62
         y: 0
-        width: 64
-        height: 224
-      alignment: 9
-      pivot: {x: 0.49999976, y: 0.08461543}
+        width: 62
+        height: 218
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d99c18ccd94941249bdac005e748435a
-      internalID: 1828815287
+      spriteID: 18295533ae5ddfe4ca5119ce624e7c93
+      internalID: -1048122867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk-SpriteSheet Right_2
+      name: looking left walks low saturation_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 124
         y: 0
-        width: 64
-        height: 224
-      alignment: 9
-      pivot: {x: 0.5124259, y: 0.07396455}
+        width: 62
+        height: 218
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0daa71b015c350f4fba7ad21bfeefcf2
-      internalID: -603942223
+      spriteID: 158ee4029e0fcaa4daca662060e56525
+      internalID: 1486997299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk-SpriteSheet Right_3
+      name: looking left walks low saturation_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 186
         y: 0
-        width: 64
-        height: 224
-      alignment: 9
-      pivot: {x: 0.4378693, y: 0.07751463}
+        width: 62
+        height: 218
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d47b2e2514cf744194b50bddc074f64
-      internalID: 36900806
+      spriteID: 477140299b746a9478cfce6b3a8d6633
+      internalID: 1368580869
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk-SpriteSheet Right_4
+      name: looking left walks low saturation_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 248
         y: 0
-        width: 64
-        height: 224
-      alignment: 9
-      pivot: {x: 0.5497036, y: 0.08106536}
+        width: 62
+        height: 218
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8cb9c48ed8ea844fbe7a1d18b6cebca
-      internalID: 1199519746
+      spriteID: 1c74719607cf16b4a9038870c25503a1
+      internalID: -462016117
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk-SpriteSheet Right_5
+      name: looking left walks low saturation_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 310
         y: 0
-        width: 64
-        height: 224
-      alignment: 9
-      pivot: {x: 0.5372777, y: 0.08106504}
+        width: 62
+        height: 218
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebf69c1df15b1c34c8eeacdf0608a0c8
-      internalID: 900748981
+      spriteID: 7afd69fb1a5a0a5478270ef5f7355e34
+      internalID: 328861422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk-SpriteSheet Right_6
+      name: looking left walks low saturation_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 372
         y: 0
-        width: 64
-        height: 224
-      alignment: 9
-      pivot: {x: 0.49999952, y: 0.07751463}
+        width: 62
+        height: 218
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f517072765084794390d2b28a965ca40
-      internalID: -858370896
+      spriteID: 79a1d3f88c990e94f8bf687505bc5a25
+      internalID: -752906312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk-SpriteSheet Right_7
+      name: looking left walks low saturation_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 434
         y: 0
-        width: 64
-        height: 224
-      alignment: 9
-      pivot: {x: 0.45402288, y: 0.079638824}
+        width: 62
+        height: 218
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15457c666fd386349a7ee0cb04a091ba
-      internalID: -880934706
+      spriteID: c52355aa6e983db4e8ddce2383478ea6
+      internalID: 1108847588
       vertices: []
       indices: 
       edges: []
@@ -275,14 +275,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Walk-SpriteSheet Right_0: 1740121865
-      Walk-SpriteSheet Right_1: 1828815287
-      Walk-SpriteSheet Right_2: -603942223
-      Walk-SpriteSheet Right_3: 36900806
-      Walk-SpriteSheet Right_4: 1199519746
-      Walk-SpriteSheet Right_5: 900748981
-      Walk-SpriteSheet Right_6: -858370896
-      Walk-SpriteSheet Right_7: -880934706
+      left low 1: -1584798804
+      looking left walks low saturation_1: -1048122867
+      looking left walks low saturation_2: 1486997299
+      looking left walks low saturation_3: 1368580869
+      looking left walks low saturation_4: -462016117
+      looking left walks low saturation_5: 328861422
+      looking left walks low saturation_6: -752906312
+      looking left walks low saturation_7: 1108847588
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

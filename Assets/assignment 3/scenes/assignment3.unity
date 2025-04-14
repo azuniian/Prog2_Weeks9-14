@@ -844,7 +844,6 @@ GameObject:
   - component: {fileID: 273045691}
   - component: {fileID: 273045692}
   - component: {fileID: 273045694}
-  - component: {fileID: 273045695}
   m_Layer: 0
   m_Name: JJ
   m_TagString: Untagged
@@ -1135,36 +1134,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 68e6d4bd6431ce947b1ea1488862f3e5, type: 2}
   - {fileID: 11400000, guid: d96cd71a97007574cbc75144f83a11a6, type: 2}
   onFloor: 0
---- !u!114 &273045695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 273045688}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a82f76711c2f2464ca702a2b4354b041, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  JJ: {fileID: 273045688}
-  saturationLevel: 0
-  mirrorInteractions: 0
-  doorInteractions: 0
-  wardrobeInteractions: 0
-  pillsInteractions: 0
-  showerInteractions: 0
-  momInteractions: 0
-  fridgeInteractions: 0
-  bedInteract: 0
-  mirrorInteract: 0
-  doorInteract: 0
-  fridgeInteract: 0
-  momInteract: 0
-  wardrobeInteract: 0
-  pillsInteract: 0
-  showerInteract: 0
-  isChanged: 0
+  coroutineRunning: 0
 --- !u!1 &340189193
 GameObject:
   m_ObjectHideFlags: 0
@@ -52988,6 +52958,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JJ: {fileID: 273045688}
+  jjSprite: {fileID: 273045689}
+  leftLow1: {fileID: -1584798804, guid: 67c9712e6fd68b74f947a7f9cf9d85f3, type: 3}
+  leftMedium1: {fileID: -718808826, guid: a81000d4094a8784688d14a63b4491c9, type: 3}
+  leftHigh1: {fileID: 2045975901, guid: dc8f959bb338057479860e99ba66b426, type: 3}
   saturationLevel: 0
   mirrorInteractions: 0
   doorInteractions: 0
