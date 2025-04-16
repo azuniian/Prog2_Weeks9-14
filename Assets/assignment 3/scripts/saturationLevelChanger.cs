@@ -204,19 +204,19 @@ public class saturationLevelChanger : MonoBehaviour
         //after checking which interaction it is, need to ensure that the current sprite matches the saturation level
         if (saturationLevel == 1)
         {
-            Debug.Log("sprite high");
+            //Debug.Log("sprite high");
             jjSprite.sprite = leftHigh1;
         }
 
         else if (saturationLevel == 0)
         {
-            Debug.Log("sprite regular");
+            //Debug.Log("sprite regular");
             jjSprite.sprite = leftMedium1;
         }
 
         else if (saturationLevel == -1)
         {
-            Debug.Log("sprite low");
+            //Debug.Log("sprite low");
             jjSprite.sprite = leftLow1;
         }
     }

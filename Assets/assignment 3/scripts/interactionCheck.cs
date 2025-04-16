@@ -11,7 +11,6 @@ public class interactionCheck : MonoBehaviour
     public GameObject JJ;
 
     public YarnProject bedroomDialogue;
- 
     public YarnProject bathroomDialogue;
     public YarnProject kitchenDialogue;
     public YarnProject transitionDialogue;
@@ -20,6 +19,7 @@ public class interactionCheck : MonoBehaviour
 
     public UnityEvent onSpacePress; //custom unity event which is triggered by a key press
     public UnityEvent onDialogueEnd; //custom unity event which is triggered when dialogue is done
+    public UnityEvent onRoomChange; //custom unity event which is triggered when specific interactions occur (changing rooms, moving cameras, etc)
 
     //bedroom tilemaps
     public Tilemap furnitureTiles; //tilemap which contains all of the furniture tiles that can be interacted with
@@ -27,6 +27,15 @@ public class interactionCheck : MonoBehaviour
     public List<Tile> wardrobeTiles = new List<Tile>(); //list of wardrobe tiles
     public List<Tile> vanityTiles = new List<Tile>(); //list of vanity tiles
     public List<Tile> insideBedroomDoorTiles = new List<Tile>(); //list of door tiles
+
+    //hallway tilemaps
+    public Tilemap hallwayFloor;
+    public Tilemap hallwayJJDoor;
+    public Tilemap hallwayBathroomDoor;
+    public Tilemap hallwayBanister;
+    public List<Tile> jjDoorTiles = new List<Tile>();
+    public List<Tile> doorTiles = new List<Tile>();
+    public List<Tile> stairTiles = new List<Tile>();
 
     public Vector3 jjPos;
     public Vector3Int jjPosOnGrid;
@@ -40,13 +49,19 @@ public class interactionCheck : MonoBehaviour
 
     //booleans to check where the player is
     public bool inBedroom;
+    public bool fromBedroom;
     public bool inHallway;
+    public bool fromHallway;
     public bool inBathroom;
+    public bool fromBathroom;
     public bool inKitchen;
+    public bool fromKitchen;
     public bool inTransition;
+    public bool fromTransition;
 
-
+    //dialogue running checker
     public bool isDialogueRunning = false;
+
 
     void Start()
     {
@@ -76,25 +91,7 @@ public class interactionCheck : MonoBehaviour
             checkInteraction();
         }
 
-        if(inBedroom == true)
-        {
-            dialogueRunner.SetProject(bedroomDialogue);
-        }
-
-        else if(inBathroom == true)
-        {
-            dialogueRunner.SetProject(bathroomDialogue);
-        }
-
-        else if(inKitchen == true)
-        {
-            dialogueRunner.SetProject(kitchenDialogue);
-        }
-
-        else if(inTransition == true)
-        {
-            dialogueRunner.SetProject(transitionDialogue);
-        }
+        
     }
 
     public void checkInteraction()
@@ -187,8 +184,10 @@ public class interactionCheck : MonoBehaviour
                         dialogueRunner.StartDialogue("bedroomDoorExit"); //start specific dialogue
                         onSpacePress.Invoke(); //calls custom unity event
                     }
+                    fromBedroom = true;
                     inBedroom = false;
                     inHallway = true;
+                    onRoomChange.Invoke();
                 }
             }
         }
@@ -196,7 +195,35 @@ public class interactionCheck : MonoBehaviour
         //hallway interactions
         else if(inHallway == true)
         {
+            foreach(Tile tile in jjDoorTiles)
+            {
+                if(hallwayJJDoor.GetTile(jjPosOnGrid) == tile)
+                {
+                    inHallway = false;
+                    inBedroom = true;
+                    onRoomChange.Invoke();
+                }
+            }
 
+            foreach(Tile tile in doorTiles)
+            {
+                if(hallwayBathroomDoor.GetTile(jjPosOnGrid) == tile)
+                {
+                    inHallway = false;
+                    inBathroom = true;
+                    onRoomChange.Invoke();
+                }
+            }
+
+            foreach(Tile tile in stairTiles)
+            {
+                if(hallwayBanister.GetTile(jjPosOnGrid) == tile)
+                {
+                    inHallway = false;
+                    inKitchen = true;
+                    onRoomChange.Invoke();
+                }
+            }
         }
 
 
