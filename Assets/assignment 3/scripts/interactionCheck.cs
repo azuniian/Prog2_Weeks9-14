@@ -11,12 +11,17 @@ public class interactionCheck : MonoBehaviour
     public GameObject JJ;
 
     public YarnProject bedroomDialogue;
+ 
+    public YarnProject bathroomDialogue;
+    public YarnProject kitchenDialogue;
+    public YarnProject transitionDialogue;
     
     public DialogueRunner dialogueRunner; //yarn prefab
 
     public UnityEvent onSpacePress; //custom unity event which is triggered by a key press
     public UnityEvent onDialogueEnd; //custom unity event which is triggered when dialogue is done
 
+    //bedroom tilemaps
     public Tilemap furnitureTiles; //tilemap which contains all of the furniture tiles that can be interacted with
     public List<Tile> bedTiles = new List<Tile>(); //list of bed tiles
     public List<Tile> wardrobeTiles = new List<Tile>(); //list of wardrobe tiles
@@ -26,11 +31,19 @@ public class interactionCheck : MonoBehaviour
     public Vector3 jjPos;
     public Vector3Int jjPosOnGrid;
 
+    //bedroom variables
     public float mirrorInt;
     public float doorInt;
     public float wardrobeInt;
     public bool bedInt;
     public bool isChanged;
+
+    //booleans to check where the player is
+    public bool inBedroom;
+    public bool inHallway;
+    public bool inBathroom;
+    public bool inKitchen;
+    public bool inTransition;
 
 
     public bool isDialogueRunning = false;
@@ -38,7 +51,7 @@ public class interactionCheck : MonoBehaviour
     void Start()
     {
         dialogueRunner.SetProject(bedroomDialogue);
-        
+        inBedroom = true;
     }
 
     void Update()
@@ -62,98 +75,150 @@ public class interactionCheck : MonoBehaviour
             //StartCoroutine(checkInteraction()); 
             checkInteraction();
         }
+
+        if(inBedroom == true)
+        {
+            dialogueRunner.SetProject(bedroomDialogue);
+        }
+
+        else if(inBathroom == true)
+        {
+            dialogueRunner.SetProject(bathroomDialogue);
+        }
+
+        else if(inKitchen == true)
+        {
+            dialogueRunner.SetProject(kitchenDialogue);
+        }
+
+        else if(inTransition == true)
+        {
+            dialogueRunner.SetProject(transitionDialogue);
+        }
     }
 
     public void checkInteraction()
     {
-        foreach(Tile tile in bedTiles)
+        //bedroom interactions
+        if(inBedroom == true)
         {
-            if(furnitureTiles.GetTile(jjPosOnGrid) == tile)
+            foreach (Tile tile in bedTiles)
             {
-                //change value of boolean in saturation script to ensure that the function runs properly
-                saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
-                saturationScript.bedInteract = true;
-                
-                bedInt = true;
-                isDialogueRunning = true;
-                dialogueRunner.StartDialogue("bedMorning");
-            }
-            onSpacePress.Invoke();
-        }
+                if (furnitureTiles.GetTile(jjPosOnGrid) == tile)
+                {
+                    //change value of boolean in saturation script to ensure that the function runs properly
+                    saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
+                    saturationScript.bedInteract = true;
 
-        foreach(Tile tile in wardrobeTiles)
-        {
-            if (furnitureTiles.GetTile(jjPosOnGrid) == tile)
-            {
-                if(wardrobeInt == 0)
-                {
-                    saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
-                    saturationScript.wardrobeInteract = true;
+                    bedInt = true;
                     isDialogueRunning = true;
-                    dialogueRunner.StartDialogue("wardrobeMorningInteraction1");
-                }
-                else if(wardrobeInt > 0)
-                {
-                    saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
-                    saturationScript.wardrobeInteract = true;
-                    isDialogueRunning = true;
-                    dialogueRunner.StartDialogue("wardrobeMorningUnlimited");
+                    dialogueRunner.StartDialogue("bedMorning");
                 }
                 onSpacePress.Invoke();
             }
+
+            foreach (Tile tile in wardrobeTiles)
+            {
+                if (furnitureTiles.GetTile(jjPosOnGrid) == tile)
+                {
+                    if (wardrobeInt == 0)
+                    {
+                        saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
+                        saturationScript.wardrobeInteract = true;
+                        isDialogueRunning = true;
+                        dialogueRunner.StartDialogue("wardrobeMorningInteraction1");
+                    }
+                    else if (wardrobeInt > 0)
+                    {
+                        saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
+                        saturationScript.wardrobeInteract = true;
+                        isDialogueRunning = true;
+                        dialogueRunner.StartDialogue("wardrobeMorningUnlimited");
+                    }
+                    onSpacePress.Invoke();
+                }
+            }
+
+            foreach (Tile tile in vanityTiles)
+            {
+                if (furnitureTiles.GetTile(jjPosOnGrid) == tile)
+                {
+                    if (mirrorInt == 0 && isChanged == true)
+                    {
+                        saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
+                        saturationScript.mirrorInteract = true;
+                        isDialogueRunning = true;
+                        dialogueRunner.StartDialogue("mirrorMorningInteraction1");
+                    }
+                    else if (mirrorInt == 0 && isChanged == false)
+                    {
+                        saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
+                        saturationScript.mirrorInteract = true;
+                        isDialogueRunning = true;
+                        dialogueRunner.StartDialogue("mirrorMorningNotChanged");
+                    }
+                    else if (mirrorInt == 1)
+                    {
+                        saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
+                        saturationScript.mirrorInteract = true;
+                        isDialogueRunning = true;
+                        dialogueRunner.StartDialogue("mirrorMorningInteraction2");
+                    }
+                    else if (mirrorInt > 1)
+                    {
+                        saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
+                        saturationScript.mirrorInteract = true;
+                        isDialogueRunning = true;
+                        dialogueRunner.StartDialogue("mirrorMorningUnlimited");
+                    }
+                    onSpacePress.Invoke();
+                }
+            }
+
+            foreach (Tile tile in insideBedroomDoorTiles) //checking for bedroom door interaction
+            {
+                if (furnitureTiles.GetTile(jjPosOnGrid) == tile) //if JJ is at the bedroom door
+                {
+                    if (doorInt == 0) //so the dialogue line only plays the first time you interact with the door
+                    {
+                        saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
+                        saturationScript.doorInteract = true;
+                        isDialogueRunning = true; //set the dialogue running boolean to true so the stop motion coroutine will start
+                        dialogueRunner.StartDialogue("bedroomDoorExit"); //start specific dialogue
+                        onSpacePress.Invoke(); //calls custom unity event
+                    }
+                    inBedroom = false;
+                    inHallway = true;
+                }
+            }
         }
 
-        foreach (Tile tile in vanityTiles)
+        //hallway interactions
+        else if(inHallway == true)
         {
-            if (furnitureTiles.GetTile(jjPosOnGrid) == tile)
-            {
-                if(mirrorInt == 0 && isChanged == true)
-                {
-                    saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
-                    saturationScript.mirrorInteract = true;
-                    isDialogueRunning = true;
-                    dialogueRunner.StartDialogue("mirrorMorningInteraction1");
-                }
-                else if(mirrorInt == 0 && isChanged == false)
-                {
-                    saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
-                    saturationScript.mirrorInteract = true;
-                    isDialogueRunning = true;
-                    dialogueRunner.StartDialogue("mirrorMorningNotChanged");
-                }
-                else if(mirrorInt == 1)
-                {
-                    saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
-                    saturationScript.mirrorInteract = true;
-                    isDialogueRunning = true;
-                    dialogueRunner.StartDialogue("mirrorMorningInteraction2");
-                }
-                else if(mirrorInt > 1)
-                {
-                    saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
-                    saturationScript.mirrorInteract = true;
-                    isDialogueRunning = true;
-                    dialogueRunner.StartDialogue("mirrorMorningUnlimited");
-                }
-                onSpacePress.Invoke();
-            }
+
         }
-       
-        foreach(Tile tile in insideBedroomDoorTiles) //checking for bedroom door interaction
+
+
+        //bathroom interactions
+        else if(inBathroom == true)
         {
-            if (furnitureTiles.GetTile(jjPosOnGrid) == tile) //if JJ is at the bedroom door
-            {
-                if(doorInt == 0) //so the dialogue line only plays the first time you interact with the door
-                {
-                    saturationLevelChanger saturationScript = JJ.GetComponent<saturationLevelChanger>();
-                    saturationScript.doorInteract = true;
-                    isDialogueRunning = true; //set the dialogue running boolean to true so the stop motion coroutine will start
-                    dialogueRunner.StartDialogue("bedroomDoorExit"); //start specific dialogue
-                }
-                onSpacePress.Invoke(); //calls custom unity event
-            }
+
         }
-        
+
+
+        //kitchen interactions
+        else if(inKitchen == true)
+        {
+
+        }
+
+
+        //transition interactions
+        else if(inTransition == true)
+        {
+
+        }
         
     }
 
