@@ -108,6 +108,7 @@ public class jjWalk : MonoBehaviour
 
             interactionCheck jjScript = JJ.GetComponent<interactionCheck>();
             jjScript.onDialogueEnd.AddListener(jjScript.endDialogue); //adds a listener for the custom unity event relating to dialogue
+        JJ.transform.position = posBeforeDialogue;
     }
 
     public IEnumerator pauseMovement()
@@ -117,7 +118,7 @@ public class jjWalk : MonoBehaviour
         dialogueIsRunning = true;
         while(dialogueIsRunning == true) //while dialogue is running
         {
-            JJ.transform.position = posBeforeDialogue; //continues to update the player's position as the position they had before starting dialogue
+            //JJ.transform.position = posBeforeDialogue; //continues to update the player's position as the position they had before starting dialogue
             direction = 0; //disregards any left/right button presses
             upOrDown = 0; //disregards any up/down button presses
             yield return null; //stops the coroutine so it can begin again next frame at this point

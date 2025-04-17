@@ -6,11 +6,15 @@ public class changeRoomCamera : MonoBehaviour
 {
     public Transform JJ;
 
+    public GameObject loadingText;
+
     public GameObject bedroomCam; 
     public GameObject hallwayCam;
     public GameObject bathroomCam;
     public GameObject kitchenCam;
     public GameObject transitionCam;
+    public GameObject betweenRoomsCam;
+
 
     public bool isInBedroom;
     public bool isInHallway;
@@ -40,8 +44,8 @@ public class changeRoomCamera : MonoBehaviour
         interactionScript.onRoomChange.AddListener(moveJJ);
 
         //hallway to bedroom position set
-        posHallToBed.x = -23.16f;
-        posHallToBed.y = -14.8f;
+        posHallToBed.x = -22.4f;
+        posHallToBed.y = -14.25f;
         posHallToBed.x = 0;
 
         //bedroom to hallway position set
@@ -98,6 +102,7 @@ public class changeRoomCamera : MonoBehaviour
 
     public void moveJJ()
     {
+
         interactionCheck interactionScript = JJ.GetComponent<interactionCheck>();
         isInBedroom = interactionScript.inBedroom;
         isInHallway = interactionScript.inHallway;
@@ -114,11 +119,14 @@ public class changeRoomCamera : MonoBehaviour
 
         if (isInBedroom == true)
         {
+
             if (comingFromHallway == true)
             {
+                betweenRoomsCam.SetActive(true);
+                hallwayCam.SetActive(false);
                 //move JJ to the bedroom door
                 JJ.position = posHallToBed;
-                hallwayCam.SetActive(false);
+                
             }
 
             //turn on bedroom camera
@@ -133,23 +141,26 @@ public class changeRoomCamera : MonoBehaviour
             Debug.Log("move JJ to hallway");
             if(comingFromBedroom == true)
             {
-                //put JJ in front of bedroom door
-                JJ.position = posBedToHall;
+                //put JJ in front of bedroom
                 bedroomCam.SetActive(false);
+                JJ.position = posBedToHall;
+                
             }
 
             else if(comingFromBathroom == true)
             {
                 //put JJ in front of bathroom door
-                JJ.position = posBathToHall;
                 bathroomCam.SetActive(false);
+                JJ.position = posBathToHall;
+                
             }
 
             else if(comingFromKitchen == true)
             {
                 //put JJ by banisters
-                JJ.position = posKitToHall;
                 kitchenCam.SetActive(false);
+                JJ.position = posKitToHall;
+                
             }
 
             //turn hallway camera on
@@ -166,8 +177,9 @@ public class changeRoomCamera : MonoBehaviour
             if(comingFromHallway == true)
             {
                 //put JJ inside bathroom
-                JJ.position = posHallToBath;
                 hallwayCam.SetActive(false);
+                JJ.position = posHallToBath;
+                
             }
 
             //turn on bathroom camera
@@ -182,15 +194,17 @@ public class changeRoomCamera : MonoBehaviour
             if(comingFromHallway == true)
             {
                 //put JJ in front of stairs
-                JJ.position = posHallToKit;
                 hallwayCam.SetActive(false);
+                JJ.position = posHallToKit;
+                
             }
 
             else if(comingFromTransition == true)
             {
                 //put JJ in front of front door
-                JJ.position = posTransToKit;
                 transitionCam.SetActive(false);
+                JJ.position = posTransToKit;
+                
             }
 
             //turn on kitchen camera
@@ -206,8 +220,9 @@ public class changeRoomCamera : MonoBehaviour
             if(comingFromKitchen == true)
             {
                 //put JJ on deck
-                JJ.position = posKitToTrans;
                 kitchenCam.SetActive(false);
+                JJ.position = posKitToTrans;
+                
             }
 
             //turn on transition camera
@@ -216,5 +231,9 @@ public class changeRoomCamera : MonoBehaviour
             //interactionCheck interactionScript = JJ.GetComponent<interactionCheck>();
             interactionScript.fromKitchen = false;
         }
+
+        loadingText.SetActive(false);
+        betweenRoomsCam.SetActive(false);
     }
+
 }

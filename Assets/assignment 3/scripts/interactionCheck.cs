@@ -10,6 +10,8 @@ public class interactionCheck : MonoBehaviour
 {
     public GameObject JJ;
 
+    public GameObject betweenRoomsCam;
+
     public YarnProject bedroomDialogue;
     public YarnProject bathroomDialogue;
     public YarnProject kitchenDialogue;
@@ -38,8 +40,14 @@ public class interactionCheck : MonoBehaviour
     public List<Tile> doorTiles = new List<Tile>();
     public List<Tile> stairTiles = new List<Tile>();
 
+    //bathroom tilemaps
+    public Tilemap bathroomFloor;
+    public Tilemap bathroomTub;
+    //public List<Tile> floorIntTiles = new List<Tile>();
+    public List<Tile> bathtubTiles = new List<Tile>();
+
     //kitchen tilemaps
-    public Tilemap kitchenFloor;
+    public Tilemap kitchenBanisters;
     public Tilemap kitchenAssets;
     public List<Tile> frontDoorTiles = new List<Tile>();
     public List<Tile> banisterTiles = new List<Tile>();
@@ -47,7 +55,6 @@ public class interactionCheck : MonoBehaviour
     //transition tilemaps
     public Tilemap transitionArea;
     public List<Tile> transitionTiles = new List<Tile>();
-
     public Vector3 jjPos;
     public Vector3Int jjPosOnGrid;
 
@@ -81,6 +88,7 @@ public class interactionCheck : MonoBehaviour
     void Start()
     {
         dialogueRunner.SetProject(bedroomDialogue);
+        onRoomChange.AddListener(changeCam);
         inBedroom = true;
     }
 
@@ -217,6 +225,7 @@ public class interactionCheck : MonoBehaviour
                     inHallway = false;
                     fromHallway = true;
                     inBedroom = true;
+                    betweenRoomsCam.SetActive(true);
                     onRoomChange.Invoke();
                 }
             }
@@ -228,6 +237,7 @@ public class interactionCheck : MonoBehaviour
                     inHallway = false;
                     fromHallway=true;
                     inBathroom = true;
+                    betweenRoomsCam.SetActive(true);
                     onRoomChange.Invoke();
                 }
             }
@@ -239,6 +249,7 @@ public class interactionCheck : MonoBehaviour
                     inHallway = false;
                     fromHallway = true;
                     inKitchen = true;
+                    betweenRoomsCam.SetActive(true);
                     onRoomChange.Invoke();
                 }
             }
@@ -248,7 +259,7 @@ public class interactionCheck : MonoBehaviour
         //bathroom interactions
         else if(inBathroom == true)
         {
-
+            //if()
         }
 
 
@@ -261,17 +272,19 @@ public class interactionCheck : MonoBehaviour
                 {
                     inKitchen = false;
                     inTransition = true;
+                    betweenRoomsCam.SetActive(true);
                     onRoomChange.Invoke();
                 }
             }
 
             foreach(Tile tile in banisterTiles)
             {
-                if(kitchenAssets.GetTile(jjPosOnGrid) == tile)
+                if(kitchenBanisters.GetTile(jjPosOnGrid) == tile)
                 {
                     inKitchen = false;
                     fromKitchen = true;
                     inHallway = true;
+                    betweenRoomsCam.SetActive(true);
                     onRoomChange.Invoke();
                 }
             }
@@ -282,12 +295,11 @@ public class interactionCheck : MonoBehaviour
         else if(inTransition == true)
         {
             dialogueRunner.SetProject(transitionDialogue);
+            isDialogueRunning = true;
             dialogueRunner.StartDialogue("transition1");
-            dialogueRunner.StartDialogue("transition2");
-            dialogueRunner.StartDialogue("transition3");
+            inTransition = false;
+            onSpacePress.Invoke();
             gameEnd = true;
-            dialogueRunner.SetProject(gameEnds);
-            onGameEnd();
         }
 
 
@@ -297,7 +309,10 @@ public class interactionCheck : MonoBehaviour
         {
             gameEndEarly = true;
             dialogueRunner.SetProject(gameEnds);
-            onGameEnd();
+            isDialogueRunning = true;
+            inBedroom = false;
+            onSpacePress.Invoke();
+            
         }
         
     }
@@ -306,18 +321,36 @@ public class interactionCheck : MonoBehaviour
     {
         isDialogueRunning = false; //sets the dialogue running value to false so that the coroutine will end
         onDialogueEnd.RemoveAllListeners(); //removes all listeners relating to this unity event (i.e. hard reset of the game condition)
+
+        if(gameEnd == true || gameEndEarly == true)
+        {
+            onGameEnd();
+        }
     }
 
     public void onGameEnd()
     {
-        if (gameEndEarly == true)
+        if (isDialogueRunning == false)
         {
-            
-        }
+            dialogueRunner.SetProject(gameEnds);
+            if (gameEndEarly == true)
+            {
+                betweenRoomsCam.SetActive(true);
+                dialogueRunner.StartDialogue("gameEndEarly");
+            }
 
-        else if(gameEnd == true)
-        {
-
+            else if (gameEnd == true)
+            {
+                betweenRoomsCam.SetActive(true);
+                dialogueRunner.StartDialogue("gameEndNormal");
+            }
         }
+        
+    }
+
+    public void changeCam()
+    {
+        Debug.Log("cam change");
+        betweenRoomsCam.SetActive(true);
     }
 }
