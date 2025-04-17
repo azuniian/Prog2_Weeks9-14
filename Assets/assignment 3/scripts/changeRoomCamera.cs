@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class changeRoomCamera : MonoBehaviour
 {
-    public GameObject JJ;
+    public Transform JJ;
 
     public GameObject bedroomCam; 
     public GameObject hallwayCam;
@@ -117,7 +117,7 @@ public class changeRoomCamera : MonoBehaviour
             if (comingFromHallway == true)
             {
                 //move JJ to the bedroom door
-                JJ.transform.position = posHallToBed;
+                JJ.position = posHallToBed;
                 hallwayCam.SetActive(false);
             }
 
@@ -134,21 +134,21 @@ public class changeRoomCamera : MonoBehaviour
             if(comingFromBedroom == true)
             {
                 //put JJ in front of bedroom door
-                JJ.transform.position = posBedToHall;
+                JJ.position = posBedToHall;
                 bedroomCam.SetActive(false);
             }
 
             else if(comingFromBathroom == true)
             {
                 //put JJ in front of bathroom door
-                JJ.transform.position = posBathToHall;
+                JJ.position = posBathToHall;
                 bathroomCam.SetActive(false);
             }
 
             else if(comingFromKitchen == true)
             {
                 //put JJ by banisters
-                JJ.transform.position = posKitToHall;
+                JJ.position = posKitToHall;
                 kitchenCam.SetActive(false);
             }
 
@@ -166,7 +166,7 @@ public class changeRoomCamera : MonoBehaviour
             if(comingFromHallway == true)
             {
                 //put JJ inside bathroom
-                JJ.transform.position = posHallToBath;
+                JJ.position = posHallToBath;
                 hallwayCam.SetActive(false);
             }
 
@@ -182,14 +182,14 @@ public class changeRoomCamera : MonoBehaviour
             if(comingFromHallway == true)
             {
                 //put JJ in front of stairs
-                JJ.transform.position = posHallToKit;
+                JJ.position = posHallToKit;
                 hallwayCam.SetActive(false);
             }
 
             else if(comingFromTransition == true)
             {
                 //put JJ in front of front door
-                JJ.transform.position = posTransToKit;
+                JJ.position = posTransToKit;
                 transitionCam.SetActive(false);
             }
 
@@ -206,7 +206,7 @@ public class changeRoomCamera : MonoBehaviour
             if(comingFromKitchen == true)
             {
                 //put JJ on deck
-                JJ.transform.position = posKitToTrans;
+                JJ.position = posKitToTrans;
                 kitchenCam.SetActive(false);
             }
 

@@ -14,6 +14,7 @@ public class interactionCheck : MonoBehaviour
     public YarnProject bathroomDialogue;
     public YarnProject kitchenDialogue;
     public YarnProject transitionDialogue;
+    public YarnProject gameEnds;
     
     public DialogueRunner dialogueRunner; //yarn prefab
 
@@ -36,6 +37,16 @@ public class interactionCheck : MonoBehaviour
     public List<Tile> jjDoorTiles = new List<Tile>();
     public List<Tile> doorTiles = new List<Tile>();
     public List<Tile> stairTiles = new List<Tile>();
+
+    //kitchen tilemaps
+    public Tilemap kitchenFloor;
+    public Tilemap kitchenAssets;
+    public List<Tile> frontDoorTiles = new List<Tile>();
+    public List<Tile> banisterTiles = new List<Tile>();
+
+    //transition tilemaps
+    public Tilemap transitionArea;
+    public List<Tile> transitionTiles = new List<Tile>();
 
     public Vector3 jjPos;
     public Vector3Int jjPosOnGrid;
@@ -61,6 +72,10 @@ public class interactionCheck : MonoBehaviour
 
     //dialogue running checker
     public bool isDialogueRunning = false;
+
+    //game end checker
+    public bool gameEndEarly;
+    public bool gameEnd;
 
 
     void Start()
@@ -200,6 +215,7 @@ public class interactionCheck : MonoBehaviour
                 if(hallwayJJDoor.GetTile(jjPosOnGrid) == tile)
                 {
                     inHallway = false;
+                    fromHallway = true;
                     inBedroom = true;
                     onRoomChange.Invoke();
                 }
@@ -210,6 +226,7 @@ public class interactionCheck : MonoBehaviour
                 if(hallwayBathroomDoor.GetTile(jjPosOnGrid) == tile)
                 {
                     inHallway = false;
+                    fromHallway=true;
                     inBathroom = true;
                     onRoomChange.Invoke();
                 }
@@ -220,6 +237,7 @@ public class interactionCheck : MonoBehaviour
                 if(hallwayBanister.GetTile(jjPosOnGrid) == tile)
                 {
                     inHallway = false;
+                    fromHallway = true;
                     inKitchen = true;
                     onRoomChange.Invoke();
                 }
@@ -237,14 +255,49 @@ public class interactionCheck : MonoBehaviour
         //kitchen interactions
         else if(inKitchen == true)
         {
+            foreach(Tile tile in frontDoorTiles)
+            {
+                if(kitchenAssets.GetTile(jjPosOnGrid) == tile)
+                {
+                    inKitchen = false;
+                    inTransition = true;
+                    onRoomChange.Invoke();
+                }
+            }
 
+            foreach(Tile tile in banisterTiles)
+            {
+                if(kitchenAssets.GetTile(jjPosOnGrid) == tile)
+                {
+                    inKitchen = false;
+                    fromKitchen = true;
+                    inHallway = true;
+                    onRoomChange.Invoke();
+                }
+            }
         }
 
 
         //transition interactions
         else if(inTransition == true)
         {
+            dialogueRunner.SetProject(transitionDialogue);
+            dialogueRunner.StartDialogue("transition1");
+            dialogueRunner.StartDialogue("transition2");
+            dialogueRunner.StartDialogue("transition3");
+            gameEnd = true;
+            dialogueRunner.SetProject(gameEnds);
+            onGameEnd();
+        }
 
+
+
+        //game ends
+        if(bedInt == true)
+        {
+            gameEndEarly = true;
+            dialogueRunner.SetProject(gameEnds);
+            onGameEnd();
         }
         
     }
@@ -253,5 +306,18 @@ public class interactionCheck : MonoBehaviour
     {
         isDialogueRunning = false; //sets the dialogue running value to false so that the coroutine will end
         onDialogueEnd.RemoveAllListeners(); //removes all listeners relating to this unity event (i.e. hard reset of the game condition)
+    }
+
+    public void onGameEnd()
+    {
+        if (gameEndEarly == true)
+        {
+            
+        }
+
+        else if(gameEnd == true)
+        {
+
+        }
     }
 }
